@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Life Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="fixed left-0 top-0 w-full z-50 p-4 bg-gray-100 shadow-md">
+        <div class="py-2 px-6 md:px-20 flex items-center justify-between">
+            <!-- Logo -->
+            <!-- mobile menu -->
+            <div class="flex items-center justify-center">
+                <div class="menuBtn flex md:hidden cursor-pointer mr-2">
+                    <i class="fa-solid fa-bars text-xl text-gray-600"></i>
+                </div>
+                <div class="text-xl md:text-4xl text-gray-600 italic font-semibold cursor-pointer">
+                    Health <span class="text-orange-600 not-italic font-bold">Life</span>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex items-center space-x-4 md:space-x-7">
+                <li id="links"
+                    class="homeBtn a text-gray-600 text-md md:text-xl hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+                    Home
+                </li>
+                <li id="links"
+                    class="aboutBtn text-gray-600 text-md md:text-xl hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+                    About
+                </li>
+                <li id="links"
+                    class="contactBtn text-gray-600 text-md md:text-xl hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+                    Contact
+                </li>
+                <li class="donateBtn">
+                    <button
+                        class="py-2 px-6 rounded-full bg-orange-600 text-white font-medium shadow hover:bg-orange-700 transition duration-300">
+                        Donate
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Mobile Donate Button -->
+            <li class="flex md:hidden donateBtn1">
+                <button id=""
+                    class="donateBtn py-2 px-6 rounded-full bg-orange-600 text-white shadow hover:bg-orange-700 transition duration-300">
+                    Donate
+                </button>
+            </li>
+        </div>
+    </nav>
+
+    <!-- mobile section -->
+    <div
+        class="mobileMenu animate-section fixed hidden flex flex-col items-center justify-center space-y-8 shadow-md top-16 h-60 inset-0 bg-gray-100 py-24 overflow-auto z-20">
+        <li id="links"
+            class="homeBtn1 a text-gray-600 text-md md:text-xl list-none hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+            Home
+        </li>
+        <li id="links"
+            class="aboutBtn1 text-gray-600 text-md md:text-xl list-none hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+            About
+        </li>
+        <li id="links"
+            class="contactBtn1 text-gray-600 text-md md:text-xl list-none hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+            Contact
+        </li>
+    </div>
+
+    <!-- Hero Section -->
+    <div
+        class="hero flex flex-col pt-16 items-center justify-start md:justify-center w-full bg-cover bg-left md:bg-center relative">
+
+        <!-- Hero Content -->
+        <div class="flex flex-col items-center justify-start md:justify-center px-5 py-16 md:py-40 w-full  text-center">
+            <div class="text-xl md:text-3xl text-white font-bold my-5 drop-shadow-lg shadow-black">
+                WELCOME TO HEALTH LIFE 
+            </div>
+            <div class="text-2xl md:text-8xl italic font-semibold text-gray-700 md:text-gray-600 drop-shadow-md">
+                <span class="first-text"></span> <span class="second-text italic text-orange-600"></span>
+            </div>
+            <div class="text-md md:text-xl text-white w-full md:w-1/2 my-5 drop-shadow-md shadow-black">
+                Empowering healthier lives through personalized care, expert guidance, and holistic wellness
+                solutions. Together, let’s build a healthier tomorrow.
+            </div>
+            <div>
+                <button
+                    class="py-2 px-4 md:py-3 md:px-6 text-md md:text-lg bg-orange-600 text-white mt-5 rounded-full">EXPLORE
+                    MORE</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Benefits of eating healthy foods -->
+    <div class="animate-section flex flex-col items-center justify-center px-5 py-10 md:px-32 md:py-32">
+        <h1 class="text-2xl md:text-5xl text-gray-600 mb-16 font-bold">BENEFITS OF A <span
+                class="text-orange-600 italic">HEALTHY
+                LIFE</span></h1>
+        <div class="grid md:grid-cols-1 lg:grid-2 sm:grid-cols-2 grid-cols-1 gap-5">
+            <div
+                class="animate-section px-6 py-14 mb-5 flex flex-col items-center justify-center rounded-md bg-gray-200 cursor-pointer">
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">1</span>
+                <h1 class="py-5 text-orange-600 text-lg font-bold">Improved Physical Health</h1>
+                <p class="text-xl ">Reduces the risk of chronic diseases such as heart disease, diabetes, and obesity.
+                </p>
+            </div>
+            <div
+                class="animate-section px-6 py-14 mb-5 flex flex-col items-center justify-center rounded-md bg-gray-200 cursor-pointer">
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">2</span>
+                <h1 class="py-5 text-orange-600 text-lg font-bold">Better Mental Well-being</h1>
+                <p class="text-xl ">Promotes reduced stress and anxiety through regular exercise and mindfulness.
+                </p>
+            </div>
+            <div
+                class="animate-section px-6 py-14 mb-5 flex flex-col items-center justify-center rounded-md bg-gray-200 cursor-pointer">
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">3</span>
+                <h1 class="py-5 text-orange-600 text-lg font-bold">Increased Longevity</h1>
+                <p class="text-xl ">A healthy lifestyle can extend your lifespan by preventing lifestyle-related
+                    illnesses.
+                </p>
+            </div>
+            <div
+                class="animate-section px-6 py-14 mb-5 flex flex-col items-center justify-center rounded-md bg-gray-200 cursor-pointer">
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">4</span>
+                <h1 class="py-5 text-orange-600 text-lg font-bold">Enhanced Quality of Life</h1>
+                <p class="text-xl ">Encourages better mobility, strength, and overall fitness.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- why choose us -->
+    <div class="animate-section flex flex-col items-center justify-center w-full px-8 py-10 bg-gray-100">
+        <h1 class="text-2xl md:text-5xl text-gray-600 mb-6 font-bold">WHY CHOOSE <span class="text-orange-600 italic">
+                US</span>
+        </h1>
+        <div class="animate-section flex flex-col items-center justify-center px-4 md:px-32 pt-4 pb-14">
+            <div class="flex h-48 md:h-96 items-center justify-center space-x-3 md:space-x-16 my-12">
+                <div class="flex flex-col items-center justify-center">
+                    <h1 class="mb-4 text-orange-600 text-lg px-2 md:text-2xl">Expertly Curated Content</h1>
+                    <div class="w-40 md:w-96 text-md md:text-2xl">Our team of health professionals and wellness experts
+                        ensures that every
+                        piece
+                        of content is
+                        accurate, actionable, and backed by science.</div>
+                </div>
+                <div class="w-48 h-48 md:w-96 md:h-96 transform rounded-lg">
+                    <img id="images" class="w-full h-full object-cover rounded-xl cursor-pointer shadow-xl"
+                        src="img1.jpg" alt="image">
+                </div>
+            </div>
+            <div class="animate-section flex h-48 md:h-96 items-center justify-center space-x-3 md:space-x-16 my-12">
+                <div class="w-48 h-48 md:w-96 md:h-96 transform rounded-lg">
+                    <img id="images" class="w-full h-full object-cover rounded-lg cursor-pointer shadow-xl"
+                        src="img3.jpg" alt="image">
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <h1 class="mb-4 text-orange-600 text-lg px-2 md:text-2xl">Personalized Experience</h1>
+                    <div class="w-40 md:w-96 text-md md:text-2xl">From meal plans to fitness programs, we offer tailored
+                        recommendations
+                        based
+                        on your unique goals and preferences..</div>
+                </div>
+            </div>
+            <div class="animate-section flex h-48 md:h-96 items-center justify-center space-x-3 md:space-x-16 my-12">
+                <div class="flex flex-col items-center justify-center">
+                    <h1 class="mb-4 text-orange-600 text-lg px-2 md:text-2xl">Comprehensive Resources</h1>
+                    <div class="w-40 md:w-96 text-md md:text-2xl">We provide a one-stop platform for all things health
+                        and
+                        wellness—recipes,
+                        fitness routines, mindfulness tips, and more—saving you time and effort.</div>
+                </div>
+                <div class="w-48 h-48 md:w-96 md:h-96 transform rounded-lg">
+                    <img id="images" class="w-full h-full object-cover rounded-lg cursor-pointer shadow-xl"
+                        src="img4.jpg" alt="image">
+                </div>
+            </div>
+            <div class="animate-section flex h-48 md:h-96 items-center justify-center space-x-3 md:space-x-16 my-12">
+                <div class="w-48 h-48 md:w-96 md:h-96 transform rounded-lg">
+                    <img id="images" class="w-full h-full object-cover rounded-lg cursor-pointer shadow-xl"
+                        src="img5.jpg" alt="image">
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <h1 class="mb-4 text-orange-600 text-lg px-2 md:text-2xl">User-Friendly Design</h1>
+                    <div class="w-40 md:w-96 text-md md:text-2xl">Our website is designed to be intuitive and visually
+                        appealing, ensuring
+                        a seamless experience on all devices.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Overlay -->
+    <div id="balanceOverlay"
+        class="animate-section fixed inset-0 bg-gray-500 bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <!-- Modal -->
+        <div class="animate-section bg-white rounded-lg shadow-lg p-6 max-w-md mx-5 w-full">
+            <h2 class="text-xl font-bold text-orange-600 mb-4">BALANCE DIET</h2>
+            <p class="mb-6 text-xl">Eat a variety of whole, nutrient-dense foods, including fruits, vegetables, whole
+                grains,
+                lean proteins, and healthy fats.
+                Stay hydrated by drinking plenty of water throughout the day.
+                Limit processed foods, sugar, and excessive salt.</p>
+            <div class="flex justify-start space-x-4">
+                <button id="balanceModal"
+                    class="animate-section bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-500">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="regularOverlay"
+        class="animate-section fixed inset-0 bg-gray-500 bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <!-- Modal -->
+        <div class="animate-section bg-white rounded-lg shadow-lg p-6 max-w-md mx-5 w-full">
+            <h2 class="text-xl font-bold text-orange-600 mb-4">Regular Physical Activity</h2>
+            <p class="mb-6 text-xl">Aim for at least 150 minutes of moderate exercise (e.g., brisk walking, cycling) or
+                75 minutes of vigorous activity (e.g., running, HIIT) per week.
+                Incorporate strength training exercises twice a week to build muscle and bone health.
+                Stay active throughout the day by taking short walks or using the stairs.</p>
+            <div class="flex justify-start space-x-4">
+                <button id="regularModal"
+                    class="animate-section bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-500">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="qualityOverlay"
+        class="animate-section fixed inset-0 bg-gray-500 bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <!-- Modal -->
+        <div class="animate-section bg-white rounded-lg shadow-lg p-6 max-w-md mx-5 w-full">
+            <h2 class="text-xl font-bold text-orange-600 mb-4">Quality Sleep</h2>
+            <p class="mb-6 text-xl">Get 7-9 hours of sleep per night to allow your body to rest, repair, and recharge.
+                Maintain a consistent sleep schedule, even on weekends.
+                Create a relaxing bedtime routine and keep your bedroom dark, quiet, and cool.</p>
+            <div class="flex justify-start space-x-4">
+                <button id="qualityModal"
+                    class="animate-section bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-500">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="stressOverlay"
+        class="animate-section fixed inset-0 bg-gray-500 bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <!-- Modal -->
+        <div class="animate-section bg-white rounded-lg shadow-lg p-6 max-w-md mx-5 w-full">
+            <h2 class="text-xl font-bold text-orange-600 mb-4">Stress Management</h2>
+            <p class="mb-6 text-xl">Practice mindfulness or meditation to manage stress and improve mental clarity.
+                Engage in activities you enjoy, like hobbies or spending time with loved ones.
+                Set boundaries and learn to say "no" when necessary to avoid burnout.</p>
+            <div class="flex justify-start space-x-4">
+                <button id="stressModal"
+                    class="animate-section bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-500">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ways to live a healthy life -->
+    <div class="animate-section py-16 w-full md:px-24 px-3">
+        <h1 class="text-2xl md:text-5xl text-gray-600 text-center mb-12 font-bold">WAYS TO HAVE A <span
+                class="text-orange-600 italic">HEALTHY LIFE</span></h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg-grid-cols-4">
+            <div id="balanceDiet"
+                class="animate-section flex items-center justify-start my-5 md:my-8 bg-gray-200 hover:bg-gray-300 duration-200 transition text-xl py-2 px-4 md:py-4 md:px-6 rounded-full mx-5 cursor-pointer">
+                <div class="w-8 h-8 bg-orange-600 mr-7 rounded-full"></div>
+                <div>Balance Diet <br> <span class="text-orange-600 text-xl">Learn more</span></div>
+            </div>
+            <div id="regular"
+                class="animate-section flex items-center justify-start my-5 md:my-8 bg-gray-200 hover:bg-gray-300 duration-200 transition text-xl py-2 px-4 md:py-4 md:px-6 rounded-full mx-5 cursor-pointer">
+                <div class="w-8 h-8 bg-orange-600 mr-7 rounded-full"></div>
+                <div> Physical Activity <br> <span class="text-orange-600 text-xl">Learn more</span></div>
+            </div>
+            <div id="qualitySleep"
+                class="animate-section flex items-center justify-start my-5 md:my-8 bg-gray-200 hover:bg-gray-300 duration-200 transition text-xl py-2 px-4 md:py-4 md:px-6 rounded-full mx-5 cursor-pointer">
+                <div class="w-8 h-8 bg-orange-600 mr-7 rounded-full"></div>
+                <div> Quality Sleep <br> <span class="text-orange-600 text-xl">Learn more</span></div>
+            </div>
+            <div id="stress"
+                class="animate-section flex items-center justify-start my-5 md:my-8 bg-gray-200 hover:bg-gray-300 duration-200 transition text-xl py-2 px-4 md:py-4 md:px-6 rounded-full mx-5 cursor-pointer">
+                <div class="w-8 h-8 bg-orange-600 mr-7 rounded-full"></div>
+                <div> Stress Management <br> <span class="text-orange-600 text-xl">Learn more</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Healthy foods -->
+    <div class="animate-section flex flex-col items-center justify-center py-20 w-full md:px-24 px-8">
+        <h1 class="text-2xl md:text-5xl text-gray-600 text-center mb-10 md:mb-28 font-bold">SOME HEALTHY <span
+                class="text-orange-600 italic">FRUITS</span></h1>
+        <div class="grid md:grid-cols-3 lg:grid-4 sm:grid-cols-2 grid-cols-1 gap-8">
+            <div class="animate-section my-4">
+                <div><img class="rounded-lg" src="orange.jpg" alt="orange fruit"></div>
+                <h1 class="text-center my-4 text-orange-600 text-xl font-bold">ORANGE</h1>
+                <p>High in vitamin C, which boosts the immune system.
+                    Contains fiber, aiding digestion.
+                    Rich in antioxidants to fight inflammation and protect cells.</p>
+            </div>
+            <div class="animate-section my-4">
+                <div><img class="rounded-lg" src="mango.jpg" alt="mango fruit"></div>
+                <h1 class="text-center my-4 text-orange-600 text-xl font-bold">MANGO</h1>
+                <p>Loaded with vitamin A, promoting eye health.
+                    Contains vitamin C and folate, aiding immunity and cell repair.
+                    Rich in fiber and natural sugars for energy.</p>
+            </div>
+            <div class="animate-section my-4">
+                <div><img class="rounded-lg" src="banana.jpg" alt="banana fruit"></div>
+                <h1 class="text-center my-4 text-orange-600 text-xl font-bold">BANANA</h1>
+                <p>High in potassium, essential for muscle and heart function.
+                    Provides energy through natural sugars and complex carbohydrates.
+                    Contains vitamin B6, which aids brain function.</p>
+            </div>
+            <div class="animate-section my-4">
+                <div><img class="rounded-lg" src="strawberry.jpg" alt="strawberry fruit"></div>
+                <h1 class="text-center my-4 text-orange-600 text-xl font-bold">STRAWBERRY</h1>
+                <p>Excellent source of vitamin C and manganese.
+                    Contains antioxidants like anthocyanins, which reduce inflammation.
+                    Rich in fiber to promote digestion.</p>
+            </div>
+            <div class="animate-section my-4">
+                <div><img class="rounded-lg" src="pineapple.jpg" alt="pineapple fruit"></div>
+                <h1 class="text-center my-4 text-orange-600 text-xl font-bold">PINEAPPLE</h1>
+                <p>Contains bromelain, an enzyme that aids digestion and reduces inflammation.
+                    Rich in vitamin C and manganese.
+                    Hydrating and refreshing due to its high water content.</p>
+            </div>
+            <div class="animate-section my-4">
+                <div><img class="rounded-lg" src="grapes.jpg" alt="grapes fruit"></div>
+                <h1 class="text-center my-4 text-orange-600 text-xl font-bold">GRAPES</h1>
+                <p>Packed with antioxidants like resveratrol, which promote heart health.
+                    Contains vitamins K and C for bone and immune health.
+                    Low in calories but provides natural energy.</p>
+            </div>
+            <div class="animate-section my-4">
+                <div><img class="rounded-lg" src="apple.jpg" alt="apple fruit"></div>
+                <h1 class="text-center my-4 text-orange-600 text-xl font-bold">APPLE</h1>
+                <p>A great source of fiber (especially in the peel), promoting gut health.
+                    Contains vitamin C and polyphenols with antioxidant properties.
+                    Low in calories, making it a healthy snack option.</p>
+            </div>
+            <div class="animate-section my-4">
+                <div><img class="rounded-lg" src="watermelon.jpg" alt="watermelon fruit"></div>
+                <h1 class="text-center my-4 text-orange-600 text-xl font-bold">WATERMELON</h1>
+                <p>High Water Content: Composed of 92% water, making it excellent for hydration.
+                    Rich in vitamins A and C, which boost immunity, skin health, and vision.
+                    Provides potassium, which helps regulate blood pressure.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Healthy recipes recommendation -->
+    <div class="animate-section flex flex-col items-center justify-center w-full px-8 py-10 bg-gray-100">
+        <h1 class="text-2xl text-center md:text-5xl text-gray-600 mb-6 font-bold">SOME RECIPES FOR <span
+                class="text-orange-600 italic">
+                HEALTHY LIFE</span>
+        </h1>
+        <div class="animate-section flex flex-col items-center justify-center px-4 md:px-28 pt-4 pb-14">
+            <div
+                class="animate-section flex flex-col md:flex-row items-center justify-center space-x-3 md:space-x-6 my-8">
+                <div class="w-full h-full transform rounded-lg">
+                    <img id="" class="w-full object-cover p-3 rounded-lg cursor-pointer" src="Greek Yogurt.jpg"
+                        alt="image">
+                </div>
+                <div class="flex flex-col items-center justify-center w-full">
+                    <h1 class="mb-4 text-orange-600 text-lg px-2 md:text-2xl text-center">Greek Yogurt</h1>
+                    <div class="w-full text-md md:text-2xl text-justify md:w-96">
+                        High in Protein: Greek yogurt provides essential amino acids that support muscle repair and
+                        growth.
+                        <br />
+                        Rich in Antioxidants: The mixed berries are packed with antioxidants, which protect your cells
+                        from damage and reduce inflammation.
+                        <br />
+                        Promotes Digestive Health: Granola and chia seeds add fiber, aiding digestion and maintaining a
+                        healthy gut.
+                        <br />
+                        Sustained Energy: A balanced mix of protein, healthy carbs, and fats keeps you full and
+                        energized
+                        for longer.
+                    </div>
+                </div>
+            </div>
+            <div
+                class="animate-section flex flex-col md:flex-row items-center justify-center space-x-3 md:space-x-6 my-8">
+                <div class="w-full h-full transform rounded-lg">
+                    <img id="" class="md:w-full w-full object-cover p-3 rounded-lg cursor-pointer" src="Veggie Bowl.jpg"
+                        alt="image">
+                </div>
+                <div class="flex flex-col items-center justify-center w-full">
+                    <h1 class="mb-4 text-orange-600 text-lg px-2 md:text-2xl text-center">Quinoa & Veggie Bowl</h1>
+                    <div class="w-full text-md md:text-2xl text-justify md:w-96">
+                        Complete Protein: Quinoa is a plant-based complete protein, providing all nine essential amino
+                        acids.
+                        <br />
+                        Rich in Vitamins and Minerals: Sweet potatoes are high in vitamin A, while broccoli offers
+                        vitamin C and folate.
+                        <br />
+                        Heart Health: Chickpeas or black beans are rich in fiber, which helps lower cholesterol levels
+                        and
+                        support heart health.
+                        <br />
+                        Supports Weight Management: This low-calorie, high-fiber meal keeps you satisfied without
+                        overeating.
+                    </div>
+                </div>
+            </div>
+            <div
+                class="animate-section flex flex-col md:flex-row items-center justify-center space-x-3 md:space-x-6 my-8">
+                <div class="w-full h-full transform rounded-lg">
+                    <img id="" class="w-full object-cover p-3 rounded-lg cursor-pointer" src="baked-salmon.jpg"
+                        alt="image">
+                </div>
+                <div class="flex flex-col items-center justify-center w-full md:w-full">
+                    <h1 class="mb-4 text-orange-600 text-lg px-2 md:text-2xl text-center">Baked Salmon with Garlic and
+                        Herbs</h1>
+                    <div class="w-full text-md md:text-2xl text-justify md:w-96">
+                        Omega-3 Fatty Acids: Salmon is an excellent source of omega-3s, which reduce inflammation and
+                        support
+                        brain and heart health.
+                        <br />
+                        Boosts Immunity: Garlic contains compounds like allicin, which may enhance your immune system.
+                        <br />
+                        Rich in Protein: Salmon is packed with lean protein, which is essential for muscle repair and
+                        overall
+                        bodily functions.
+                        <br />
+                        Heart-Friendly Meal: This dish promotes heart health by lowering blood pressure and improving
+                        cholesterol levels.
+                    </div>
+                </div>
+            </div>
+            <div
+                class="animate-section flex flex-col md:flex-row items-center justify-center space-x-3 md:space-x-6 my-8">
+                <div class="w-full h-full transform rounded-lg">
+                    <img id="" class="md:w-full w-full object-cover p-3 rounded-lg cursor-pointer" src="avogado.jpg"
+                        alt="image">
+                </div>
+                <div class="flex flex-col items-center justify-center w-full md:w-full">
+                    <h1 class="mb-4 text-orange-600 text-lg px-2 md:text-2xl text-center">Avocado & Egg Toast</h1>
+                    <div class="w-full text-md md:text-2xl text-justify md:w-96">
+                        Healthy Fats: Avocado is rich in monounsaturated fats, which help lower bad cholesterol and
+                        promote
+                        brain health.
+                        <br />
+                        Packed with Nutrients: Avocado contains potassium and fiber, while eggs provide vitamin D and
+                        choline
+                        for brain function.
+                        <br />
+                        Energy Boost: A combination of protein, fats, and whole-grain carbs gives you sustained energy
+                        throughout the day.
+                        <br />
+                        Supports Weight Loss: This nutrient-dense meal keeps you full and satisfied, preventing
+                        unnecessary
+                        snacking.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Work outs -->
+    <div class="animate-section py-20 w-full sm:px-20 md:px-48 px-5 mb-10">
+        <h1 class="text-2xl md:text-5xl text-gray-600 text-center mb-10 md:mb-28 font-bold">WORK <span
+                class="text-orange-600 italic">OUTS</span></h1>
+        <div class="">Regular workouts are essential for maintaining physical and mental well-being. Whether you're
+            looking to build muscle, lose weight, or simply improve your overall fitness, the right workout plan can
+            help you achieve your goals. Here's a breakdown of popular workout types to include in your fitness routine:
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-2 sm:grid-cols-2 grid-cols-1 my-8 scroll-py-14 gap-5">
+            <div class="animate-section flex flex-col items-center justify-start">
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">1</span>
+                <h1 class="text-2xl text-orange-600 mb-4">Strength Training</h1>
+                <div class="flex flex-col items-center justify-center">
+                    <div>Builds muscle, increases strength, and improves bone density.
+                    </div>
+                    <div>Weightlifting (e.g., squats, deadlifts, bench press)
+                        Bodyweight exercises (e.g., push-ups, pull-ups, planks)
+                        Resistance bands
+                        Frequency: 2–3 times per week with rest days in between.</div>
+                </div>
+            </div>
+            <div class="animate-section flex flex-col items-center justify-start">
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">2</span>
+                <h1 class="text-2xl text-orange-600 mb-4">Cardiovascular Workouts</h1>
+                <div class="flex flex-col items-center justify-center">
+                    <div>Improves heart health, boosts endurance, and burns calories.
+                    </div>
+                    <div>Running, jogging, or brisk walking
+                        Cycling or spinning
+                        Swimming
+                        Jump rope or high-intensity interval training (HIIT)
+                        Frequency: 150 minutes of moderate cardio or 75 minutes of vigorous cardio weekly.</div>
+                </div>
+            </div>
+            <div class="animate-section flex flex-col items-center justify-start">
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">3</span>
+                <h1 class="text-2xl text-orange-600 mb-4"> Flexibility and Mobility Training</h1>
+                <div class="flex flex-col items-center justify-center">
+                    <div> Enhances joint health, prevents injuries, and improves range of motion.
+                    </div>
+                    <div>Yoga
+                        Stretching routines
+                        Pilates
+                        Frequency: 2–3 times per week, or after workouts to aid recovery.</div>
+                </div>
+            </div>
+            <div class="animate-section flex flex-col items-center justify-start">
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">4</span>
+                <h1 class="text-2xl text-orange-600 mb-4"> High-Intensity Interval Training</h1>
+                <div class="flex flex-col items-center justify-center">
+                    <div> Burns fat efficiently, improves cardio endurance, and builds muscle in less time.
+                    </div>
+                    <div>Sprint intervals (30 seconds sprint, 1-minute walk)
+                        Circuit training with exercises like burpees, mountain climbers, and jump squats
+                        Frequency: 2–3 times per week due to its intensity.</div>
+                </div>
+            </div>
+            <div class="animate-section flex flex-col items-center justify-start">
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">5</span>
+                <h1 class="text-2xl text-orange-600 mb-4"> Low-Impact Workouts</h1>
+                <div class="flex flex-col items-center justify-center">
+                    <div> Ideal for beginners, those recovering from injury, or anyone seeking a gentler form of
+                        exercise.
+                    </div>
+                    <div>Walking
+                        Swimming
+                        Elliptical machine
+                        Frequency: Can be done daily.</div>
+                </div>
+            </div>
+            <div class="animate-section flex flex-col items-center justify-start">
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">6</span>
+                <h1 class="text-2xl text-orange-600 mb-4"> Functional Training</h1>
+                <div class="flex flex-col items-center justify-center">
+                    <div> Mimics real-life movements to improve overall body function and prevent injuries.
+                    </div>
+                    <div>Kettlebell swings
+                        Farmer’s carries
+                        Lunges and step-ups
+                        Frequency: 2–3 times per week.</div>
+                </div>
+            </div>
+        </div>
+        <div class="animate-section flex flex-col items-center justify-center my-10">
+            <h1 class="text-center text-2xl text-orange-600 mb-6">Tips for a Successful Workout Routine</h1>
+            <div>
+                Set Clear Goals: Decide whether your focus is on weight loss, muscle gain, or general fitness.
+                Stay Consistent: Progress takes time—stick to your routine!
+                Warm Up and Cool Down: Start with 5–10 minutes of light activity and end with stretches.
+                Mix It Up: Keep things interesting by combining different workout types.
+                Listen to Your Body: Rest when needed to avoid overtraining or injury.
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Disorders causes and their solutions -->
+    <div class="animate-section py-20 w-full md:px-24 px-3 mb-10">
+        <h1 class="text-2xl md:text-5xl text-gray-600 text-center mb-10 md:mb-28 font-bold">DISORDERS, CAUSES AND <span
+                class="text-orange-600 italic">THEIR SOLUTIONS</span></h1>
+        <div class="flex flex-col items-center justify-center">
+            <div
+                class="animate-section grid md:grid-cols-3 lg:grid-3 sm:grid-cols-3 grid-cols-1 my-8 scroll-py-14 gap-5 p-8 rounded-xl bg-gray-100">
+                <div class="flex flex-col items-center justify-center">
+                    <span
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">1</span>
+                    <div class="mb-4 text-orange-600 text-lg px-2 md:text-2xl">Anxiety Disorders</div>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <div class="text-orange-600 text-xl mb-3">CAUSES</div>
+                    <div>Genetic predisposition.
+                        Stressful or traumatic life events.
+                        Imbalances in brain chemicals like serotonin and dopamine.</div>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <div class="text-orange-600 text-xl mb-3">SOLUTIONS</div>
+                    <div>Regular mindfulness and meditation practices.
+                        Cognitive Behavioral Therapy (CBT) with a licensed therapist.
+                        Prescription medications such as SSRIs (as advised by a doctor).
+                        Regular exercise and maintaining a healthy sleep schedule.</div>
+                </div>
+            </div>
+            <div
+                class="animate-section grid md:grid-cols-3 lg:grid-3 sm:grid-cols-3 grid-cols-1 my-8 scroll-py-14 gap-5 p-8 rounded-xl bg-gray-100">
+                <div class="flex flex-col items-center justify-center">
+                    <span
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">2</span>
+                    <div class="mb-4 text-orange-600 text-lg px-2 md:text-2xl">Diabetes (Type 2)</div>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <div class="text-orange-600 text-xl mb-3">CAUSES</div>
+                    <div>Poor diet high in processed sugars and fats.
+                        Lack of physical activity leading to obesity.
+                        Genetic factors and family history.</div>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <div class="text-orange-600 text-xl mb-3">SOLUTIONS</div>
+                    <div>Balanced diet with whole foods, lean proteins, and complex carbs.
+                        Regular physical activity, such as walking, jogging, or resistance training.
+                        Blood sugar monitoring and medications (e.g., metformin) as prescribed.
+                        Stress management to reduce cortisol levels.</div>
+                </div>
+            </div>
+            <div
+                class="animate-section grid md:grid-cols-3 lg:grid-3 sm:grid-cols-3 grid-cols-1 my-8 scroll-py-14 gap-5 p-8 rounded-xl bg-gray-100">
+                <div class="flex flex-col items-center justify-center">
+                    <span
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">3</span>
+                    <div class="mb-4 text-orange-600 text-lg px-2 md:text-2xl">Depression</div>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <div class="text-orange-600 text-xl mb-3">CAUSES</div>
+                    <div>Genetic predisposition and family history of mental health disorders.
+                        Prolonged exposure to stress or trauma.
+                        Hormonal changes (e.g., postpartum depression).
+                        Neurochemical imbalances.</div>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <div class="text-orange-600 text-xl mb-3">SOLUTIONS</div>
+                    <div>Psychotherapy, such as CBT or interpersonal therapy.
+                        Antidepressant medications prescribed by a psychiatrist.
+                        Lifestyle changes like exercising and spending time outdoors.
+                        Building supportive social connections and practicing self-care.</div>
+                </div>
+            </div>
+            <div
+                class="animate-section grid md:grid-cols-3 lg:grid-3 sm:grid-cols-3 grid-cols-1 my-8 scroll-py-14 gap-5 p-8 rounded-xl bg-gray-100">
+                <div class="flex flex-col items-center justify-center">
+                    <span
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 mb-5 text-white">4</span>
+                    <div class="mb-4 text-orange-600 text-lg px-2 md:text-2xl"> Eating Disorders (e.g., Anorexia,
+                        Bulimia)</div>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <div class="text-orange-600 text-xl mb-3">CAUSES</div>
+                    <div>Social and cultural pressures around body image.
+                        Low self-esteem and history of trauma or abuse.
+                        Coexisting mental health conditions like anxiety or OCD.</div>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <div class="text-orange-600 text-xl mb-3">SOLUTIONS</div>
+                    <div>Comprehensive treatment plans involving psychotherapy.
+                        Nutritional counseling to restore healthy eating habits.
+                        Support groups for people recovering from eating disorders.
+                        Addressing underlying mental health issues with therapy and medication.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- about section -->
+    <section class="animate-section about-section hidden fixed top-16 inset-0 bg-gray-100 py-20 overflow-auto z-20">
+        <div class="max-w-screen-xl mx-auto px-5">
+            <!-- Section Title -->
+            <h2 class="animate-section text-3xl md:text-5xl font-bold text-center text-gray-600 mb-12">About Us</h2>
+
+            <div class="animate-section grid md:grid-cols-2 gap-10">
+                <!-- Mission Section -->
+                <div class="flex flex-col items-start space-y-6">
+                    <h3 class="text-2xl font-semibold text-orange-600">Our Mission</h3>
+                    <p class="text-lg text-gray-600">
+                        Our mission is to empower individuals to take control of their health and well-being by
+                        providing reliable, accessible, and scientifically-backed resources that promote a balanced and
+                        sustainable lifestyle.
+                    </p>
+                </div>
+
+                <!-- Vision Section -->
+                <div class="animate-section flex flex-col items-start space-y-6">
+                    <h3 class="text-2xl font-semibold text-orange-600">Our Vision</h3>
+                    <p class="text-lg text-gray-600">
+                        We envision a world where everyone can live a healthy, fulfilled life with confidence in their
+                        health decisions, access to nutritious food, fitness routines, and mental wellness practices
+                        that can be easily integrated into their daily lives.
+                    </p>
+                </div>
+            </div>
+
+            <!-- How to Be Confident Section -->
+            <div class="animate-section mt-16 bg-white py-10 px-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold text-orange-600 mb-6">How to Be Confident</h3>
+                <p class="text-lg text-gray-600 mb-4">
+                    Confidence starts with the small, everyday choices you make. By adopting healthy habits like regular
+                    physical activity, mindful eating, and focusing on your mental health, you will not only improve
+                    your health but also boost your confidence. Embrace the journey to a better you, stay positive, and
+                    trust in your ability to achieve your goals.
+                </p>
+                <ul class="list-disc pl-6 text-lg text-gray-600">
+                    <li>Set achievable health goals and celebrate your progress.</li>
+                    <li>Focus on what you can control and practice self-care daily.</li>
+                    <li>Build a positive mindset by surrounding yourself with supportive people.</li>
+                </ul>
+            </div>
+
+            <!-- Summary Section -->
+            <div class="animate-section mt-16">
+                <h3 class="text-2xl font-semibold text-orange-600 mb-6">Summary of Our Website</h3>
+                <p class="text-lg text-gray-600">
+                    Healthy Life is your go-to source for all things health and wellness. Our website offers
+                    expert-curated content including meal plans, fitness routines, mental wellness tips, and more. We
+                    aim to provide a holistic approach to health that encourages both physical and mental well-being,
+                    giving you the tools to lead a balanced, healthy life. Explore our resources, get personalized
+                    recommendations, and start your journey toward a healthier, more confident you today!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- donation section -->
+    <section style="display: none;"
+        class="animate-section donate-section fixed inset-0 top-16 overflow-auto w-full bg-gray-100 py-20 px-6 z-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl md:text-5xl text-gray-700 font-bold mb-6">Support Our Cause</h1>
+            <p class="text-lg md:text-2xl text-gray-600 mb-10">Your generous donation helps us continue promoting a
+                healthy lifestyle and supporting well-being for all.</p>
+
+            <!-- Donation Form -->
+            <div class="animate-section bg-white p-10 rounded-lg shadow-md mb-12">
+                <h2 class="text-3xl text-gray-700 font-semibold text-center mb-6">Make Your Donation</h2>
+                <form action="#" method="post" class="space-y-6">
+                    <div class="animate-section md:px-72 px-4 flex flex-col md:flex-row items-center justify-between">
+                        <label for="name" class="text-gray-600 text-lg mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe"
+                            class="w-full md:w-1/2 py-2 px-4 border border-gray-300 rounded-md">
+                    </div>
+
+                    <div class="flex flex-col md:px-72 px-4 md:flex-row items-center justify-between">
+                        <label for="email" class="text-gray-600 text-lg mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com"
+                            class="w-full md:w-1/2 py-2 px-4 border border-gray-300 rounded-md">
+                    </div>
+
+                    <div class="flex flex-col md:px-72 px-4 md:flex-row items-center justify-between">
+                        <label for="amount" class="text-gray-600 text-lg mb-2">Donation Amount</label>
+                        <input type="number" id="amount" name="amount" placeholder="$50"
+                            class="w-full md:w-1/2 py-2 px-4 border border-gray-300 rounded-md">
+                    </div>
+
+                    <div class="animate-section flex justify-center">
+                        <button type="submit"
+                            class="py-3 px-8 bg-orange-600 text-white text-lg rounded-full hover:bg-orange-700 transition duration-300">
+                            Donate Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Benefits of Donating -->
+            <div class="animate-section benefits-section text-center py-10">
+                <h2 class="text-2xl text-orange-600 font-semibold mb-6">Why Donate?</h2>
+                <p class="text-lg text-gray-600 mb-6">Your support allows us to create positive change, fund health
+                    initiatives, and spread wellness knowledge.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Benefit 1 -->
+                    <div class="animate-section flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl text-gray-700 font-semibold">Support Health Programs</h3>
+                            <p class="text-gray-600">Your donation directly funds health education, wellness programs,
+                                and community outreach.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="animate-section flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl text-gray-700 font-semibold">Make a Real Impact</h3>
+                            <p class="text-gray-600">Every donation makes a real difference in improving lives and
+                                promoting healthier communities.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="animate-section flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl text-gray-700 font-semibold">Global Reach</h3>
+                            <p class="text-gray-600">Your support helps us reach people across the globe with
+                                life-changing health resources.</p>
+                        </div>
+                    </div>
+
+                    <!-- Benefit 4 -->
+                    <div class="animate-section flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl text-gray-700 font-semibold">Join a Community</h3>
+                            <p class="text-gray-600">Become part of a global community dedicated to improving health and
+                                well-being.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section class="animate-section contact-section hidden fixed top-16 inset-0 bg-gray-100 py-16 overflow-auto z-20">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <!-- Section Title -->
+            <h2 class="text-3xl md:text-5xl font-bold text-center text-gray-600 mb-12">Contact Us</h2>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Contact Form Section -->
+                <div class="flex flex-col items-start space-y-6">
+                    <h3 class="text-2xl font-semibold text-orange-600">Get In Touch</h3>
+                    <p class="text-lg text-gray-600">
+                        Whether you have a question, feedback, or just want to say hello, we would love to hear from
+                        you. Please fill out the form below, and we'll get back to you as soon as possible!
+                    </p>
+                    <form class="space-y-4 w-full max-w-md">
+                        <input type="text" placeholder="Your Name"
+                            class="p-3 w-full border-2 border-gray-300 rounded-md" required>
+                        <input type="email" placeholder="Your Email"
+                            class="p-3 w-full border-2 border-gray-300 rounded-md" required>
+                        <textarea placeholder="Your Message" class="p-3 w-full border-2 border-gray-300 rounded-md"
+                            rows="5" required></textarea>
+                        <button type="submit" class="bg-orange-600 text-white p-3 w-full rounded-md">Send
+                            Message</button>
+                    </form>
+                </div>
+
+                <!-- Location Section -->
+                <div class="flex flex-col items-start space-y-6">
+                    <h3 class="text-2xl font-semibold text-orange-600">Our Location</h3>
+                    <p class="text-lg text-gray-600">
+                        We are located in the heart of the city, easily accessible and open to any queries you may have.
+                        Visit us during business hours or contact us online.
+                    </p>
+                    <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                        <h4 class="text-xl font-semibold text-gray-800">Office Address:</h4>
+                        <p class="text-lg text-gray-600">Sakumono ST, Ghacem Estates - Accra Ghana</p>
+                    </div>
+                    <div class="mt-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="animate-section mt-16 bg-white py-10 px-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold text-orange-600 mb-6">Follow Us on Social Media</h3>
+                <p class="text-lg text-gray-600 mb-4">
+                    Stay connected with us through our social media channels for the latest updates, health tips, and
+                    more!
+                </p>
+                <div class="flex space-x-6">
+                    <a href="https://facebook.com" class="text-gray-600 hover:text-orange-600"><i
+                            class="fab fa-facebook-f text-2xl"></i></a>
+                    <a href="https://twitter.com" class="text-gray-600 hover:text-orange-600"><i
+                            class="fab fa-twitter text-2xl"></i></a>
+                    <a href="https://instagram.com" class="text-gray-600 hover:text-orange-600"><i
+                            class="fab fa-instagram text-2xl"></i></a>
+                    <a href="https://linkedin.com" class="text-gray-600 hover:text-orange-600"><i
+                            class="fab fa-linkedin-in text-2xl"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Details Section -->
+            <div class="mt-16">
+                <h3 class="animate-section text-2xl font-semibold text-orange-600 mb-6">Contact Details</h3>
+                <p class="text-lg text-gray-600">
+                    If you prefer a direct conversation or need help with a specific query, feel free to reach out to
+                    our support team through the details below. We're here to assist you.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-phone-alt text-xl text-gray-600"></i>
+                        <p class="text-lg text-gray-600">+233 5939 57373</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-envelope text-xl text-gray-600"></i>
+                        <p class="text-lg text-gray-600">otengebenezer326@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- review display -->
+    <div class="animate-section py-20 w-full md:px-24 px-8 z-10">
+        <h1 class="animate-section text-2xl md:text-5xl text-gray-600 text-center mb-10 md:mb-28 font-bold">FROM OUR
+            <span class="text-orange-600 italic">CUSTOMERS</span>
+        </h1>
+        <div class="animate-section reviewSpace grid md:grid-cols-3 lg:grid-4 sm:grid-cols-2 grid-cols-1 gap-8">
+
+        </div>
+    </div>
+
+    <!-- review section -->
+    <div class="animate-section py-20 w-full md:px-48 px-7 mb-10 z-10">
+        <div class="flex flex-col items-center space-y-6">
+            <h3 class="text-2xl md:text-5xl text-orange-600 text-center mb-8 md:mb-16 font-bold">Give us a
+                review</h3>
+            <p class="animate-section text-lg text-gray-600">
+                Positive reviews from other customers act as social proof, reassuring potential buyers about the
+                quality
+                of
+                a product or service. They help establish confidence in a brand and influence purchase
+                decisions. Even
+                constructive negative reviews demonstrate transparency and provide businesses an opportunity to
+                address
+                issues and improve.
+            </p>
+            <form class="animate-section space-y-4 w-full max-w-md">
+                <input type="text" placeholder="Your Name"
+                    class="nameInput p-3 w-full border-2 border-gray-300 rounded-md" required>
+                <input type="email" placeholder="Your Email"
+                    class="emailInput p-3 w-full border-2 border-gray-300 rounded-md" required>
+                <textarea placeholder="Your review" class="textInput p-3 w-full border-2 border-gray-300 rounded-md"
+                    rows="5" required></textarea>
+                <button class="reviewBtn bg-orange-600 text-white p-3 w-full rounded-md">Send
+                    Review</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- footer section -->
+    <footer class="animate-section bg-gray-800 text-white py-10">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 ">
+                <!-- Logo and About Section -->
+                <div class="animate-section w-full sm:w-1/3 mb-6 mx-3">
+                    <h2 class="text-xl font-bold mb-4">Healthy Life</h2>
+                    <p class="text-gray-400">Your partner in achieving a healthier lifestyle. We offer tailored
+                        health
+                        tips, meal plans, fitness routines, and more!</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="animate-section w-full sm:w-1/3 mb-6 mx-3">
+                    <h2 class="text-lg font-bold mb-4">Quick Links</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-600">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-600">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-600">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-600">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="animate-section w-full sm:w-1/3 mb-6 mx-3">
+                    <h2 class="text-lg font-bold mb-4 ">Follow Us</h2>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-orange-600"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-600"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-600"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-600"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-6 pt-4 text-center">
+                <p class="text-gray-400 text-sm">© 2025 Healthy Life. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCP5iymPROXMb1op691TP5xNzLqXWl1QJs",
+            authDomain: "review-database-55ab7.firebaseapp.com",
+            projectId: "review-database-55ab7",
+            storageBucket: "review-database-55ab7.firebasestorage.app",
+            messagingSenderId: "735205849533",
+            appId: "1:735205849533:web:5f65c4939a1709b46dfad4"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app)
+        const colRef = collection(db, "reviews")
+
+        const nameInput = document.querySelector(".nameInput");
+        const emailInput = document.querySelector(".emailInput");
+        const textInput = document.querySelector(".textInput");
+        const reviewSpace = document.querySelector(".reviewSpace");
+        const reviewBtn = document.querySelector(".reviewBtn");
+
+        let reviewsArray = [];
+
+        // Function to load reviews
+        function loadReviews() {
+            reviewsArray = [];
+            reviewSpace.innerHTML = "";
+
+            getDocs(colRef)
+                .then((snapshot) => {
+                    snapshot.forEach((doc) => {
+                        reviewsArray.push({ ...doc.data() });
+                    });
+
+                    reviewsArray.forEach((each) => {
+                        reviewSpace.innerHTML += `
+                        <div class="p-5 text-start rounded-lg bg-gray-100 my-3">
+                            <h1 class="text-orange-600 text-xl">${each.name}</h1>
+                            <h1 class="text-orange-600 text-lg">${each.email}</h1>
+                            <p class="text-justify my-4">${each.text}</p>
+                        </div>
+        `;
+                    });
+                })
+                .catch((error) => console.log("Error loading reviews:", error.message));
+        }
+
+        reviewBtn.addEventListener("click", () => {
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const text = textInput.value.trim();
+
+            if (name && email && text) {
+                addDoc(colRef, { name, email, text })
+                    .then(() => {
+                        nameInput.value = "";
+                        emailInput.value = "";
+                        textInput.value = "";
+
+                        loadReviews();
+                    })
+                    .catch((error) => console.log("Error adding review:", error.message));
+            } else {
+                console.log("Aall input fields are required");
+            }
+        });
+
+        // when window is refreshed
+        window.addEventListener("load", loadReviews);
+
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
