@@ -103,6 +103,33 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((section) => observer.observe(section)); // Observe each section
 });
 
+// only images
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".animate-image"); // Target all elements with the class 'animate-section'
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1"; // Make it fully visible
+          entry.target.style.transform = "translateY(10px)"; // Reset the position
+        } else {
+          // Reset animation when leaving the viewport
+          entry.target.style.opacity = "0";
+          entry.target.style.transform = "translateY(50px)";
+        }
+      });
+    },
+    {
+      root: null, // Observe in the viewport
+      rootMargin: "0px 0px -2% 0px", // Trigger when it's 25% from the bottom of the screen
+      threshold: 0, // Trigger as soon as it intersects
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section)); // Observe each section
+});
+
 const aboutBtn = document.querySelector(".aboutBtn");
 const aboutBtn1 = document.querySelector(".aboutBtn1");
 const aboutSection = document.querySelector(".about-section");
@@ -216,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (donateSection.style.display === "none") {
       donateSection.style.display = "block";
     } else {
-      donateSection.style.display = "block";
+      donateSection.style.display = "none";
     }
   });
 });
