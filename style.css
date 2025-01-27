@@ -15,8 +15,8 @@
 /* Initial state */
 .animate-section {
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease, transform 0.8s ease;
 }
 
 html,
@@ -43,11 +43,11 @@ html {
 /* Keyframe animation for sliding from right */
 @keyframes slideInFromRight {
   0% {
-    transform: translateX(100%);
+    transform: translateX(10%);
     opacity: 0;
   }
   50% {
-    transform: translateX(-10%);
+    transform: translateX(-5%);
     opacity: 0.8;
   }
   100% {
