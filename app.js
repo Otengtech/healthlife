@@ -23,6 +23,25 @@ images.forEach((image) => {
   });
 });
 
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Function to handle scroll behavior
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    scrollToTopBtn.style.display = "flex"; // Show the button when scrolled down
+  } else {
+    scrollToTopBtn.style.display = "none"; // Hide the button when at the top
+  }
+});
+
+// Function to scroll back to top
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Smooth scrolling effect
+  });
+});
+
 const balanceModalBtn = document.getElementById("balanceDiet");
 const regularModalBtn = document.getElementById("regular");
 const qualityModalBtn = document.getElementById("qualitySleep");
