@@ -35,6 +35,16 @@ body {
   margin: 0;
 }
 
+#scrollToTopBtn {
+  display: none; /* Hidden by default */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#scrollToTopBtn:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  opacity: 0.8; /* Slight transparency on hover */
+}
+
 .about-section {
   height: 100vh;
   overflow-y: scroll;
