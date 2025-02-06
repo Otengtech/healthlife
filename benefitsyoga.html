@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthLife</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="fixed left-0 top-0 w-full z-50 p-4 bg-gray-100 shadow-md">
+        <div class="py-2 px-6 md:px-20 flex items-center justify-between">
+            <!-- Logo -->
+            <!-- mobile menu -->
+            <div class="w-full flex items-center justify-between">
+                <div class="text-xl md:text-4xl text-gray-600 italic font-semibold cursor-pointer">
+                    Health <span class="text-orange-600 not-italic font-bold">Life</span>
+                </div>
+                <div class="menuBtn flex md:hidden cursor-pointer mr-2">
+                    <i class="fa-solid fa-bars text-xl text-gray-600"></i>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex items-center space-x-4 md:space-x-7">
+                <a href="index.html">
+                    <li id="links"
+                        class="homeBtn text-gray-600 text-md md:text-xl hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+                        Home
+                    </li>
+                </a>
+                <a href="blog.html">
+                    <li id="links"
+                        class="blogBtn text-gray-600 text-md md:text-xl hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+                        Blog
+                    </li>
+                </a>
+                <a href="about.html">
+                    <li id="links"
+                        class="aboutBtn text-gray-600 text-md md:text-xl hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+                        About
+                    </li>
+                </a>
+                <a href="contact.html">
+                    <li id="links"
+                        class="contactBtn text-gray-600 text-md md:text-xl hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+                        Contact
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- move to top -->
+    <div class="moveTop">
+        <i class="fa-solid fa-arrow-up fixed bottom-5 md:bottom-10 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-orange-600 mb-5 text-black shadow-lg z-50 cursor-pointer"
+            id="scrollToTopBtn"></i>
+
+    </div>
+
+    <!-- mobile section -->
+    <div
+        class="mobileMenu animate-section fixed hidden flex flex-col items-center justify-center space-y-8 shadow-md top-16 h-60 inset-0 bg-gray-100 py-24 overflow-auto z-20">
+        <a href="index.html">
+            <li id="links"
+                class="homeBtn1 text-gray-600 text-md md:text-xl list-none hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+                Home
+            </li>
+        </a>
+        <a href="blog.html">
+            <li id="links"
+                class="blogBtn1 text-gray-600 text-md md:text-xl list-none hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+                Blog
+            </li>
+        </a>
+        <a href="about.html">
+            <li id="links"
+                class="aboutBtn1 text-gray-600 text-md md:text-xl list-none hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+                About
+            </li>
+        </a>
+        <a href="contact.html">
+            <li id="links"
+                class="contactBtn1 text-gray-600 text-md md:text-xl list-none hover:text-orange-600 transition duration-300 font-medium cursor-pointer">
+                Contact
+            </li>
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <div
+        class="benefitsyoga flex flex-col pt-16 items-center justify-start md:justify-center w-full bg-cover bg-top relative">
+
+        <!-- Hero Content -->
+        <div class="flex flex-col items-center justify-start md:justify-center px-5 py-16 md:py-40 w-full  text-center">
+            <div class="md:text-6xl text-2xl font-bold text-white">
+                BENEFITS OF YOGA
+            </div>
+        </div>
+    </div>
+
+    <!-- Contents -->
+    <section class="mt-16 py-20">
+        <div class="max-w-screen-xl mx-auto px-5">
+            <!-- Section Title -->
+            <h2 class="animate-section text-3xl md:text-5xl font-bold text-center text-gray-600 mb-14">
+                The Benefits of Yoga for the Mind</h2>
+
+            <p class="text-lg text-gray-600 my-8">
+                Yoga is more than just a physical practice—it is a powerful tool for mental well-being. By combining
+                movement, breath control, and meditation, yoga helps calm the mind, reduce stress, and improve overall
+                mental health. Regular practice can enhance focus, emotional stability, and resilience, making it an
+                essential practice for a balanced life.
+            </p>
+            <h2 class="animate-section text-3xl md:text-5xl font-bold text-center text-gray-600 mb-14">
+                How Yoga Benefits the Mind</h2>
+
+            <div class="my-8">
+                <h3 class="text-2xl font-semibold text-orange-600">1. Reduces Stress & Anxiety</h3>
+                <p class="text-lg text-gray-600">
+                    Yoga promotes relaxation by lowering cortisol levels, the stress hormone. Practices like deep
+                    breathing (pranayama) and gentle movements activate the parasympathetic nervous system, which calms
+                    the body and mind.
+                </p>
+            </div>
+            <div class="my-8">
+                <h3 class="text-2xl font-semibold text-orange-600">2. Enhances Focus & Concentration</h3>
+                <p class="text-lg text-gray-600">
+                    Mindful movement and breathwork in yoga improve mental clarity and concentration. By focusing on the
+                    present moment, yoga helps train the mind to stay alert and engaged, reducing distractions.
+                </p>
+            </div>
+            <div class="my-8">
+                <h3 class="text-2xl font-semibold text-orange-600">3. Improves Emotional Stability
+                </h3>
+                <p class="text-lg text-gray-600">
+                    Yoga fosters emotional resilience by helping practitioners become more aware of their thoughts and
+                    feelings. Through self-reflection and mindfulness, it teaches individuals to respond to emotions
+                    rather than react impulsively.
+                </p>
+            </div>
+            <div class="my-8">
+                <h3 class="text-2xl font-semibold text-orange-600">4. Boosts Mood & Fights Depression</h3>
+                <p class="text-lg text-gray-600">
+                    Yoga increases the production of endorphins, serotonin, and dopamine, which are the brain’s
+                    “feel-good” chemicals. This helps combat symptoms of depression and promotes a more positive outlook
+                    on life.
+                </p>
+            </div>
+            <div class="my-8">
+                <h3 class="text-2xl font-semibold text-orange-600">5. Encourages Mindfulness & Self-Awareness</h3>
+                <p class="text-lg text-gray-600">
+                    By focusing on breath and movement, yoga cultivates mindfulness, the practice of being fully
+                    present. This heightened awareness leads to greater self-acceptance, emotional control, and inner
+                    peace.
+                </p>
+            </div>
+            <div class="my-8">
+                <h3 class="text-2xl font-semibold text-orange-600">6. Enhances Memory & Cognitive Function </h3>
+                <p class="text-lg text-gray-600">
+                    Certain yoga poses and breathing techniques improve blood flow to the brain, which can enhance
+                    memory, decision-making, and problem-solving abilities. Studies show that regular yoga practice
+                    helps delay cognitive decline.
+                </p>
+            </div>
+            <div class="my-8">
+                <h3 class="text-2xl font-semibold text-orange-600">7. Promotes Better Sleep </h3>
+                <p class="text-lg text-gray-600">
+                    Yoga helps regulate the nervous system, making it easier to relax before bedtime. Gentle stretches
+                    and yoga nidra (yogic sleep) can improve sleep quality and help with insomnia.
+                </p>
+            </div>
+            <div class="my-8">
+                <h3 class="text-2xl font-semibold text-orange-600">8. Reduces Negative Thinking & Overthinking </h3>
+                <p class="text-lg text-gray-600">
+                    Yoga teaches the mind to stay in the present moment, reducing rumination and negative thoughts that
+                    contribute to stress and anxiety. This leads to a calmer, more peaceful state of mind.
+                </p>
+            </div>
+            <div class="my-8">
+                <h3 class="text-2xl font-semibold text-orange-600">9. Builds Mental Resilience & Inner Strength</h3>
+                <p class="text-lg text-gray-600">
+                    Yoga encourages self-discipline and patience, helping individuals navigate life’s challenges with a
+                    calm and focused mindset. The practice of holding poses and breathing through discomfort strengthens
+                    mental toughness.
+                </p>
+            </div>
+            <div class="my-8">
+                <h3 class="text-2xl font-semibold text-orange-600">10. Creates a Sense of Connection & Inner Peace</h3>
+                <p class="text-lg text-gray-600">
+                    Yoga fosters a deep sense of inner connection, promoting harmony between the mind, body, and spirit.
+                    Many practitioners find a greater sense of purpose, joy, and gratitude through yoga.
+                </p>
+            </div>
+            <div class="my-8">
+                <h3 class="text-2xl font-semibold text-orange-600">Conclusion</h3>
+                <p class="text-lg text-gray-600">
+                    Yoga is a powerful practice for mental well-being, offering benefits such as stress relief, improved
+                    focus, emotional stability, and deeper self-awareness. By integrating yoga into daily life, one can
+                    achieve a more peaceful, balanced, and resilient mind. Even just a few minutes a day can bring
+                    profound changes!
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- footer section -->
+    <footer class="animate-section bg-gray-800 text-white py-10">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 ">
+                <!-- Logo and About Section -->
+                <div class="animate-section w-full sm:w-1/3 mb-6 mx-3">
+                    <h2 class="text-xl font-bold mb-4">Healthy Life</h2>
+                    <p class="text-gray-400">Your partner in achieving a healthier lifestyle. We offer tailored
+                        health
+                        tips, meal plans, fitness routines, and more!</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="animate-section w-full sm:w-1/3 mb-6 mx-3">
+                    <h2 class="text-lg font-bold mb-4">Quick Links</h2>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 cursor-pointer hover:text-orange-600">Home</a>
+                        </li>
+                        <li><a href="blog.html" class="text-gray-400 cursor-pointer hover:text-orange-600">Blog</a></li>
+                        <li><a class="text-gray-400 cursor-pointer hover:text-orange-600">About</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-400 cursor-pointer hover:text-orange-600">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="animate-section w-full sm:w-1/3 mb-6 mx-3">
+                    <h2 class="text-lg font-bold mb-4 ">Follow Us</h2>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-orange-600"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-600"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-600"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-orange-600"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-6 pt-4 text-center">
+                <p class="text-gray-400 text-sm">© 2025 Healthy Life. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
