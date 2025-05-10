@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../App.css";
 import { Link } from "react-router-dom";
@@ -37,21 +37,20 @@ import strawberry from "../assets/strawberry.jpg";
 import watermelon from "../assets/watermelon.jpg";
 import mango from "../assets/mango.jpg";
 
-import scurvyImg from '../assets/scurvy.jpg';
-import ricketsImg from '../assets/rickets.jpg';
-import pellagraImg from '../assets/pellagra.jpg';
-import beriberiImg from '../assets/beriberi.jpg';
-import nightBlindnessImg from '../assets/night-blindness.jpg';
+import scurvyImg from "../assets/scurvy.jpg";
+import ricketsImg from "../assets/rickets.jpg";
+import pellagraImg from "../assets/pellagra.jpg";
+import beriberiImg from "../assets/beriberi.jpg";
+import nightBlindnessImg from "../assets/night-blindness.jpg";
 
 const HealthyFoods = () => {
-
   const sentences = [
     "Live Healthy, Stay Fit",
     "Eat Clean, Train Hard",
     "Fuel Your Body Right",
     "Strong Mind, Strong Body",
     "Wellness Starts Within",
-    "Health is True Wealth"
+    "Health is True Wealth",
   ];
 
   const services = [
@@ -79,9 +78,11 @@ const HealthyFoods = () => {
       name: "Pepper",
       description: "Rich in antioxidants and vitamin C.",
       image: pepper,
-      moreInfo: "Pepper helps improve digestion and may have anti-inflammatory properties.",
-      importance: "Boosts immune system and adds flavor without extra calories.",
-      usedIn: "Salads, stir-fries, soups."
+      moreInfo:
+        "Pepper helps improve digestion and may have anti-inflammatory properties.",
+      importance:
+        "Boosts immune system and adds flavor without extra calories.",
+      usedIn: "Salads, stir-fries, soups.",
     },
     {
       name: "Cabbage",
@@ -89,15 +90,17 @@ const HealthyFoods = () => {
       image: cabbage,
       moreInfo: "Cabbage supports digestion and is rich in vitamin K and C.",
       importance: "Great for weight loss and digestive health.",
-      usedIn: "Coleslaw, soups, stews."
+      usedIn: "Coleslaw, soups, stews.",
     },
     {
       name: "Onion",
-      description: "Contains antioxidants and compounds that fight inflammation.",
+      description:
+        "Contains antioxidants and compounds that fight inflammation.",
       image: onion,
-      moreInfo: "Onions are known for their heart health benefits and antibacterial properties.",
+      moreInfo:
+        "Onions are known for their heart health benefits and antibacterial properties.",
       importance: "Supports heart health and boosts immunity.",
-      usedIn: "Curries, soups, stews."
+      usedIn: "Curries, soups, stews.",
     },
     {
       name: "Green Pepper",
@@ -105,15 +108,16 @@ const HealthyFoods = () => {
       image: greenPepper,
       moreInfo: "Green peppers support immune function and eye health.",
       importance: "Good for skin, eyes, and overall immunity.",
-      usedIn: "Salads, stir-fries, fajitas."
+      usedIn: "Salads, stir-fries, fajitas.",
     },
     {
       name: "Garlic",
       description: "Known for its immune-boosting properties.",
       image: garlic,
-      moreInfo: "Garlic may reduce blood pressure and improve cholesterol levels.",
+      moreInfo:
+        "Garlic may reduce blood pressure and improve cholesterol levels.",
       importance: "Boosts immunity and has antibacterial properties.",
-      usedIn: "Sauces, marinades, roasts."
+      usedIn: "Sauces, marinades, roasts.",
     },
     {
       name: "Ginger",
@@ -121,7 +125,7 @@ const HealthyFoods = () => {
       image: ginger,
       moreInfo: "Ginger is anti-inflammatory and may help with pain relief.",
       importance: "Aids digestion and reduces muscle soreness.",
-      usedIn: "Tea, stir-fries, smoothies."
+      usedIn: "Tea, stir-fries, smoothies.",
     },
     {
       name: "Carrot",
@@ -129,7 +133,7 @@ const HealthyFoods = () => {
       image: carrot,
       moreInfo: "Carrots promote eye health and support the immune system.",
       importance: "Good for vision, skin, and overall immunity.",
-      usedIn: "Salads, soups, juices."
+      usedIn: "Salads, soups, juices.",
     },
     {
       name: "Spinach",
@@ -137,7 +141,7 @@ const HealthyFoods = () => {
       image: spinach,
       moreInfo: "Spinach improves bone health and supports metabolism.",
       importance: "Great for energy, bones, and immune function.",
-      usedIn: "Smoothies, sautés, salads."
+      usedIn: "Smoothies, sautés, salads.",
     },
     {
       name: "Tomato",
@@ -145,7 +149,7 @@ const HealthyFoods = () => {
       image: tomato,
       moreInfo: "Tomatoes help reduce the risk of heart disease and cancer.",
       importance: "Rich in antioxidants and promotes heart health.",
-      usedIn: "Salads, sauces, soups."
+      usedIn: "Salads, sauces, soups.",
     },
     {
       name: "Broccoli",
@@ -153,15 +157,16 @@ const HealthyFoods = () => {
       image: broccoli,
       moreInfo: "Broccoli supports detoxification and reduces inflammation.",
       importance: "Strengthens bones and supports heart health.",
-      usedIn: "Stir-fries, salads, steamed dishes."
+      usedIn: "Stir-fries, salads, steamed dishes.",
     },
     {
       name: "Avocado",
       description: "Loaded with healthy fats and potassium.",
       image: avocado,
-      moreInfo: "Avocados reduce bad cholesterol and are great for heart health.",
+      moreInfo:
+        "Avocados reduce bad cholesterol and are great for heart health.",
       importance: "Supports skin health and nutrient absorption.",
-      usedIn: "Toast, salads, smoothies."
+      usedIn: "Toast, salads, smoothies.",
     },
     {
       name: "Sweet Potato",
@@ -169,7 +174,7 @@ const HealthyFoods = () => {
       image: sweetPotato,
       moreInfo: "Sweet potatoes support vision and gut health.",
       importance: "Boosts energy and supports immune function.",
-      usedIn: "Baked dishes, soups, casseroles."
+      usedIn: "Baked dishes, soups, casseroles.",
     },
     {
       name: "Beetroot",
@@ -177,7 +182,7 @@ const HealthyFoods = () => {
       image: beetroot,
       moreInfo: "Beetroot helps improve blood flow and lower blood pressure.",
       importance: "Supports heart health and boosts stamina.",
-      usedIn: "Salads, juices, roasted dishes."
+      usedIn: "Salads, juices, roasted dishes.",
     },
     {
       name: "Cucumber",
@@ -185,7 +190,7 @@ const HealthyFoods = () => {
       image: cucumber,
       moreInfo: "Cucumber aids hydration and supports skin health.",
       importance: "Keeps you hydrated and helps in detoxification.",
-      usedIn: "Salads, sandwiches, detox water."
+      usedIn: "Salads, sandwiches, detox water.",
     },
     {
       name: "Eggplant",
@@ -193,7 +198,7 @@ const HealthyFoods = () => {
       image: eggplant,
       moreInfo: "Eggplant may help lower cholesterol and protect brain cells.",
       importance: "Supports heart health and weight management.",
-      usedIn: "Curries, stews, grilled dishes."
+      usedIn: "Curries, stews, grilled dishes.",
     },
     {
       name: "Kale",
@@ -201,7 +206,7 @@ const HealthyFoods = () => {
       image: kale,
       moreInfo: "Kale is a powerful antioxidant and anti-inflammatory food.",
       importance: "Supports immune system and detoxification.",
-      usedIn: "Smoothies, salads, sautéed dishes."
+      usedIn: "Smoothies, salads, sautéed dishes.",
     },
     {
       name: "Lettuce",
@@ -209,7 +214,7 @@ const HealthyFoods = () => {
       image: lettuce,
       moreInfo: "Lettuce supports hydration and digestion.",
       importance: "Good for weight loss and digestive health.",
-      usedIn: "Salads, wraps, sandwiches."
+      usedIn: "Salads, wraps, sandwiches.",
     },
     {
       name: "Okra",
@@ -217,7 +222,7 @@ const HealthyFoods = () => {
       image: okra,
       moreInfo: "Okra helps regulate blood sugar levels.",
       importance: "Supports heart health and blood sugar control.",
-      usedIn: "Stews, soups, fried dishes."
+      usedIn: "Stews, soups, fried dishes.",
     },
     {
       name: "Spring Onion",
@@ -225,7 +230,7 @@ const HealthyFoods = () => {
       image: springOnion,
       moreInfo: "Spring onions help boost immunity and bone health.",
       importance: "Great for digestion and fighting infections.",
-      usedIn: "Stir-fries, soups, salads."
+      usedIn: "Stir-fries, soups, salads.",
     },
     {
       name: "Pumpkin",
@@ -233,7 +238,7 @@ const HealthyFoods = () => {
       image: pumpkin,
       moreInfo: "Pumpkin boosts eye health and immunity.",
       importance: "Helps improve vision and supports skin health.",
-      usedIn: "Soups, pies, stews."
+      usedIn: "Soups, pies, stews.",
     },
     {
       name: "Radish",
@@ -241,7 +246,7 @@ const HealthyFoods = () => {
       image: radish,
       moreInfo: "Radish helps detoxify the liver and supports digestion.",
       importance: "Cleanses the body and improves hydration.",
-      usedIn: "Salads, pickles, soups."
+      usedIn: "Salads, pickles, soups.",
     },
     {
       name: "Zucchini",
@@ -249,23 +254,25 @@ const HealthyFoods = () => {
       image: zucchini,
       moreInfo: "Zucchini supports healthy vision and digestion.",
       importance: "Promotes weight loss and gut health.",
-      usedIn: "Grilled, baked, stir-fried dishes."
+      usedIn: "Grilled, baked, stir-fried dishes.",
     },
     {
       name: "Banana",
       description: "High in potassium and energy-boosting carbohydrates.",
       image: banana,
-      moreInfo: "Bananas support muscle function and are great for pre-workout snacks.",
+      moreInfo:
+        "Bananas support muscle function and are great for pre-workout snacks.",
       importance: "Promotes energy, digestion, and heart health.",
-      usedIn: "Smoothies, oatmeal, snacks."
+      usedIn: "Smoothies, oatmeal, snacks.",
     },
     {
       name: "Apple",
       description: "Rich in fiber and vitamin C.",
       image: apple,
-      moreInfo: "Apples support digestion and may reduce the risk of chronic diseases.",
+      moreInfo:
+        "Apples support digestion and may reduce the risk of chronic diseases.",
       importance: "Great for heart health and immune function.",
-      usedIn: "Snacks, salads, baking."
+      usedIn: "Snacks, salads, baking.",
     },
     {
       name: "Orange",
@@ -273,15 +280,16 @@ const HealthyFoods = () => {
       image: orange,
       moreInfo: "Oranges boost the immune system and help skin health.",
       importance: "Supports immunity and reduces inflammation.",
-      usedIn: "Juices, snacks, desserts."
+      usedIn: "Juices, snacks, desserts.",
     },
     {
       name: "Pineapple",
       description: "Tropical fruit rich in vitamin C and enzymes.",
       image: pineapple,
-      moreInfo: "Pineapple aids digestion and has anti-inflammatory properties.",
+      moreInfo:
+        "Pineapple aids digestion and has anti-inflammatory properties.",
       importance: "Improves digestion and boosts immunity.",
-      usedIn: "Smoothies, salads, grilled dishes."
+      usedIn: "Smoothies, salads, grilled dishes.",
     },
     {
       name: "Blueberries",
@@ -289,7 +297,7 @@ const HealthyFoods = () => {
       image: blueberries,
       moreInfo: "They support brain health and fight free radicals.",
       importance: "Improves memory and cell health.",
-      usedIn: "Smoothies, cereals, baking."
+      usedIn: "Smoothies, cereals, baking.",
     },
     {
       name: "Papaya",
@@ -297,15 +305,16 @@ const HealthyFoods = () => {
       image: papaya,
       moreInfo: "Papaya promotes digestion and eye health.",
       importance: "Great for gut and skin health.",
-      usedIn: "Salads, smoothies, desserts."
+      usedIn: "Salads, smoothies, desserts.",
     },
     {
       name: "Strawberry",
       description: "Sweet and rich in vitamin C and manganese.",
       image: strawberry,
-      moreInfo: "Strawberries help in reducing oxidative stress and boosting immunity.",
+      moreInfo:
+        "Strawberries help in reducing oxidative stress and boosting immunity.",
       importance: "Supports heart and skin health.",
-      usedIn: "Smoothies, salads, desserts."
+      usedIn: "Smoothies, salads, desserts.",
     },
     {
       name: "Watermelon",
@@ -313,7 +322,7 @@ const HealthyFoods = () => {
       image: watermelon,
       moreInfo: "Watermelon helps in hydration and may reduce muscle soreness.",
       importance: "Perfect for hydration and skin.",
-      usedIn: "Snacks, juices, salads."
+      usedIn: "Snacks, juices, salads.",
     },
     {
       name: "Mango",
@@ -321,10 +330,9 @@ const HealthyFoods = () => {
       image: mango,
       moreInfo: "Mangoes boost immunity and aid digestion.",
       importance: "Great for eyes, skin, and energy.",
-      usedIn: "Smoothies, salads, desserts."
-    }
+      usedIn: "Smoothies, salads, desserts.",
+    },
   ];
-  
 
   const diseases = [
     {
@@ -368,7 +376,10 @@ const HealthyFoods = () => {
       image: beriberiImg,
       symptoms: ["Weak muscles", "Difficulty walking", "Heart problems"],
       causes: "Thiamine (Vitamin B1) deficiency.",
-      prevention: ["Eat whole grains, nuts, and seeds", "Avoid excessive alcohol"],
+      prevention: [
+        "Eat whole grains, nuts, and seeds",
+        "Avoid excessive alcohol",
+      ],
     },
     {
       name: "Night Blindness",
@@ -383,8 +394,6 @@ const HealthyFoods = () => {
       ],
     },
   ];
-  
-  
 
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredFoods, setFilteredFoods] = useState(foods);
@@ -457,20 +466,20 @@ const HealthyFoods = () => {
             WELCOME TO HEALTHLIFE
           </motion.h1>
 
-          <div className="h-[100px] overflow-hidden relative">
-      <AnimatePresence mode="wait">
-        <motion.h2
-          key={sentences[index]}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.6 }}
-          className="text-5xl md:text-7xl drop-shadow-lg font-bold md:text-center text-left text-green-500 absolute w-full"
-        >
-          {sentences[index]}
-        </motion.h2>
-      </AnimatePresence>
-    </div>
+          <div className="h-[100px] md:h-[150px] overflow-hidden relative">
+            <AnimatePresence mode="wait">
+              <motion.h2
+                key={sentences[index]}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.6 }}
+                className="text-5xl md:text-7xl drop-shadow-lg font-bold md:text-left text-left text-green-500 absolute w-full"
+              >
+                {sentences[index]}
+              </motion.h2>
+            </AnimatePresence>
+          </div>
 
           {/* Paragraph */}
           <p className="text-left md:text-lg max-w-xl mx-auto md:mx-0 text-white">
@@ -651,15 +660,20 @@ const HealthyFoods = () => {
               {[...Array(totalPages)].map((_, i) => (
                 <button
                   key={i}
-                  onClick={() => setCurrentPage(i + 1)}
+                  onClick={() => {
+                    setCurrentPage(i + 1);
+                    const section = document.getElementById("food-section");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                   className={`px-4 py-2 rounded-full border ${
                     currentPage === i + 1
                       ? "bg-green-500 text-white"
                       : "bg-white text-gray-700 border-gray-300"
                   } hover:bg-green-200 transition`}
                 >
-                  {" "}
-                  <a href="#food-section">{i + 1}</a>
+                  {i + 1}
                 </button>
               ))}
             </div>
@@ -706,7 +720,6 @@ const HealthyFoods = () => {
           </div>
         </div>
       </section>
-
 
       <section className="py-28 bg-white">
         <h2 className="text-3xl font-bold text-center mb-8 text-green-800">

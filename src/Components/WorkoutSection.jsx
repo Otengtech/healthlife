@@ -4,35 +4,33 @@ import "../App.css";
 import Footer from "./Footer";
 import BMICalculator from "./BMICalculator";
 
-import pushupsImg from '../assets/pushups.jpg';
-import squatsImg from '../assets/squats.jpg';
-import plankImg from '../assets/plank.jpg';
-import burpeesImg from '../assets/burpees.jpg';
-import lungesImg from '../assets/lunges.jpg';
-import mountainClimbersImg from '../assets/mountainclimbers.jpg';
-import jumpingJacksImg from '../assets/jumpingjacks.jpg';
-import bicycleCrunchesImg from '../assets/bicyclecrunches.jpg';
-import gluteBridgesImg from '../assets/glutebridges.jpg';
-import tricepDipsImg from '../assets/tricepdips.jpg';
-import highKneesImg from '../assets/highknees.jpg';
-import jumpSquatsImg from '../assets/jumpsquats.jpg';
-
+import pushupsImg from "../assets/pushups.jpg";
+import squatsImg from "../assets/squats.jpg";
+import plankImg from "../assets/plank.jpg";
+import burpeesImg from "../assets/burpees.jpg";
+import lungesImg from "../assets/lunges.jpg";
+import mountainClimbersImg from "../assets/mountainclimbers.jpg";
+import jumpingJacksImg from "../assets/jumpingjacks.jpg";
+import bicycleCrunchesImg from "../assets/bicyclecrunches.jpg";
+import gluteBridgesImg from "../assets/glutebridges.jpg";
+import tricepDipsImg from "../assets/tricepdips.jpg";
+import highKneesImg from "../assets/highknees.jpg";
+import jumpSquatsImg from "../assets/jumpsquats.jpg";
 
 const workoutImages = {
-  'Push-Ups': pushupsImg,
-  'Squats': squatsImg,
-  'Plank': plankImg,
-  'Burpees': burpeesImg,
-  'Lunges': lungesImg,
-  'Mountain Climbers': mountainClimbersImg,
-  'Jumping Jacks': jumpingJacksImg,
-  'Bicycle Crunches': bicycleCrunchesImg,
-  'Glute Bridges': gluteBridgesImg,
-  'Tricep Dips': tricepDipsImg,
-  'High Knees': highKneesImg,
-  'Jump Squats': jumpSquatsImg,
+  "Push-Ups": pushupsImg,
+  Squats: squatsImg,
+  Plank: plankImg,
+  Burpees: burpeesImg,
+  Lunges: lungesImg,
+  "Mountain Climbers": mountainClimbersImg,
+  "Jumping Jacks": jumpingJacksImg,
+  "Bicycle Crunches": bicycleCrunchesImg,
+  "Glute Bridges": gluteBridgesImg,
+  "Tricep Dips": tricepDipsImg,
+  "High Knees": highKneesImg,
+  "Jump Squats": jumpSquatsImg,
 };
-
 
 const workouts = [
   {
@@ -146,7 +144,10 @@ const WorkoutSection = () => {
   const totalPages = Math.ceil(workouts.length / workoutsPerPage);
 
   const scrollToWorkouts = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const section = document.getElementById("workout");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (

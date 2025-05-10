@@ -134,6 +134,7 @@ const Footer = () => {
       <div className="text-center text-sm mt-10 border-t border-gray-700 pt-6">
         © {new Date().getFullYear()} HealthLife. All rights reserved.
       </div>
+      <div className="text-center text-md text-green-500 mt-4">Designed by Ebenezer Oteng Siaw</div>
     </footer>
   );
 };

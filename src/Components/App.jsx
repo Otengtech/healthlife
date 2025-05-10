@@ -20,7 +20,7 @@ import Mindfulness from "./Mindfulness";
 import Hydration from "./Hydration";
 import Sleep from "./Sleep";
 import Strength from "./Strength";
-import PlantBased from "./PlantBased"
+import PlantBased from "./PlantBased";
 import Motivation from "./Motivation";
 
 function App() {
@@ -74,9 +74,6 @@ function App() {
         <Route path="/personaltraining" element={<PersonalTraining />} />
         <Route path="/contactussection" element={<ContactUsSection />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
-<<<<<<< HEAD
-        <Route path="*" element={<h1 className="text-center text-red-500 mt-10">404 - Page Not Found</h1>} />
-=======
         <Route
           path="*"
           element={
@@ -85,7 +82,15 @@ function App() {
             </h1>
           }
         />
->>>>>>> e07ef6a (Another Commit)
+        <Route
+          path="*"
+          element={
+            <h1 className="text-center text-red-500 mt-10">
+              404 - Page Not Found
+              
+            </h1>
+          }
+        />
       </Routes>
     </div>
   );
