@@ -8,6 +8,9 @@
     "build": "vite build",
     "start": "serve dist"
   },
+  "engines": {
+  "node": "18.x"
+},
   "dependencies": {
     "aos": "^2.3.4",
     "axios": "^1.9.0",
