@@ -14,7 +14,7 @@ import NutritionalCounseling from "./NutritionCounseling";
 import EnergyFoodGuide from "./EnergyFoodGuide";
 import PrivacyPolicy from "./PrivacyPolicy";
 import ReviewSection from "./ReviewSection";
-import Superfoods from "./superfoods";
+import Superfoods from "./Superfoods";
 import MorningWorkout from "./MorningWorkout";
 import Mindfulness from "./Mindfulness";
 import Hydration from "./Hydration";
