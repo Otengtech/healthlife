@@ -1,13 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
+const api = import.meta.env.API_URL;
 
 const ReviewSection = () => {
   const [reviews, setReviews] = useState([]);
   const [form, setForm] = useState({ name: "", comment: "" });
-  const [mood, setMood] = useState(null);
+  // const [mood, setMood] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/reviews").then((res) => {
+    axios.get(`${api}/reviews`).then((res) => {
       setReviews(res.data);
     });
   }, []);
@@ -19,8 +20,8 @@ const ReviewSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!form.name || !form.comment) return;
-    await axios.post("http://localhost:5000/reviews", form);
-    const res = await axios.get("http://localhost:5000/reviews");
+    await axios.post(`${api}/reviews`, form);
+    const res = await axios.get(`${api}/reviews`);
     setReviews(res.data);
     setForm({ name: "", comment: "" });
   };
@@ -73,7 +74,7 @@ const ReviewSection = () => {
                   <i className="fa-solid fa-star"></i>
                   <i className="fa-solid fa-star"></i>
                 </div>
-                <span className="text-xs flex text-gray-400 block">
+                <span className="text-xs flex text-gray-400">
                   {new Date(review.date).toLocaleString()}
                 </span>
               </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Footer from "./Footer"
 const api = import.meta.env._API_URL;
@@ -32,7 +32,7 @@ const ContactUsSection = () => {
 
   return (
     <>
-    <section className="bg-white py-24 px-6 text-gray-800">
+    <section className="bg-white py-24 px-3 text-gray-800">
       <div className="max-w-4xl mx-auto text-center mb-10">
         <h2 className="text-4xl font-bold text-green-600 mb-4">Contact Us</h2>
         <p className="text-gray-600">
@@ -46,7 +46,7 @@ const ContactUsSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="max-w-3xl mx-auto bg-green-50 p-8 rounded-lg shadow-lg grid gap-6"
+        className="max-w-3xl mx-auto bg-green-50 p-4 rounded-lg shadow-lg grid gap-6"
       >
         <div className="grid md:grid-cols-2 gap-4">
           <input
