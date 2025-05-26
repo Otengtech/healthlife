@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Footer from "./Footer"
+const api = import.meta.env._API_URL;
 
 const ContactUsSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -13,7 +14,7 @@ const ContactUsSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/send-email`, {
+      const res = await fetch(`${api}/send-email`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
