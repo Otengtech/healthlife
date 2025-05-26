@@ -63,7 +63,7 @@ app.post("/subscribe", async (req, res) => {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "youremail@domain.com",
+      to: "otengebenezer326@gmail.com",
       subject: "New Newsletter Subscriber",
       text: `A new user has subscribed to your newsletter: ${email}`,
     };
