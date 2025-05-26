@@ -133,14 +133,14 @@ const Footer = () => {
             </button>
           </form>
           {status && (
-            <p
-              className={`${
-                status.type !== "success" ? "text-red-500" : "text-green-500"
-              }`}
-            >
-              {status.message}
-            </p>
-          )}
+        <p
+          className={`${
+            status.type === "success" ? "text-green-500 mt-3" : "text-red-500 mt-3"
+          }`}
+        >
+          {status.message}
+        </p>
+      )}
         </div>
       </div>
 

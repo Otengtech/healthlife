@@ -51,7 +51,7 @@ const Reviews = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/reviews", {
+      const res = await fetch(`${API_URL}/reviews`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -106,9 +106,9 @@ const Reviews = () => {
                     key={_id}
                     className="min-w-[280px] sm:min-w-[320px] max-w-xs snap-center flex-shrink-0 bg-white p-5 rounded-xl shadow-lg border border-gray-200"
                   >
-                    <h3 className="text-lg font-semibold text-gray-800">
+                    <h1 className="text-lg font-semibold text-gray-800">
                       {name}
-                    </h3>
+                    </h1>
                     <p className="text-xs text-gray-500 mb-2 italic">
                       {new Date(date).toLocaleDateString()}
                     </p>
