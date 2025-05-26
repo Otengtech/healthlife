@@ -40,7 +40,7 @@ function App() {
   // }, []);
 
   return (
-    <div className="bg-slate-50 dark:bg-slate-900 min-h-screen">
+    <div className="bg-white min-h-screen">
       <Navbar />
       <Routes>
         <Route

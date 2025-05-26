@@ -1,27 +1,40 @@
 import React, { useState } from "react";
 import "../App.css";
 import axios from "axios";
-import {Link} from "react-router-dom"
-const api = import.meta.env.API_URL;
+import { Link } from "react-router-dom";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const Footer = () => {
   const [subscriber, setSubscriber] = useState("");
-  const [subMessage, setSubMessage] = useState("");
+  const [email, setEmail] = useState("");
+  // const [subMessage, setSubMessage] = useState("");
+  const [status, setStatus] = useState(null);
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${api}/subscribe`, {
-        email: subscriber,
+      const res = await fetch(`${API_URL}/subscribe`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
       });
-      setSubMessage(res.data.message);
-      alert("SENT");
-      setSubscriber("");
+
+      const data = await res.json();
+      if (res.ok) {
+        setStatus({ success: true, message: data.message });
+        setEmail("");
+      } else {
+        setStatus({
+          success: false,
+          message: data.message || "Subscription failed.",
+        });
+      }
     } catch (error) {
-      setSubMessage("Subscription failed. Please try again.");
+      setStatus({
+        success: false,
+        message: "Network error, please try again.",
+      });
       console.log(error);
-    } finally {
-      setTimeout(() => setSubMessage(""), 5000);
     }
   };
 
@@ -45,16 +58,10 @@ const Footer = () => {
             Quick Links
           </h3>
           <ul className="space-y-2 flex flex-col text-sm">
-            <Link
-              to="/"
-              className="hover:text-green-400 transition"
-            >
+            <Link to="/" className="hover:text-green-400 transition">
               Home
             </Link>
-            <Link
-              to="/blog"
-              className="hover:text-green-400 transition"
-            >
+            <Link to="/blog" className="hover:text-green-400 transition">
               Blog
             </Link>
             <Link
@@ -69,10 +76,7 @@ const Footer = () => {
             >
               Contact
             </Link>
-            <Link
-              to="/privacy"
-              className="hover:text-green-500 transition"
-            >
+            <Link to="/privacy" className="hover:text-green-500 transition">
               Privacy Policy
             </Link>
           </ul>
@@ -118,15 +122,9 @@ const Footer = () => {
               Subscribe
             </button>
           </form>
-          {subMessage && (
-            <p
-              className={`mt-4 text-sm ${
-                subMessage.toLowerCase().includes("success")
-                  ? "text-green-400"
-                  : "text-red-400"
-              }`}
-            >
-              {subMessage}
+          {status && (
+            <p style={{ color: status.success ? "green" : "red" }}>
+              {status.message}
             </p>
           )}
         </div>
@@ -135,7 +133,9 @@ const Footer = () => {
       <div className="text-center text-sm mt-10 border-t border-gray-700 pt-6">
         © {new Date().getFullYear()} HealthLife. All rights reserved.
       </div>
-      <div className="text-center text-md text-green-500 mt-4">Designed by Ebenezer Oteng Siaw</div>
+      <div className="text-center text-md text-green-500 mt-4">
+        Designed by Ebenezer Oteng Siaw
+      </div>
     </footer>
   );
 };

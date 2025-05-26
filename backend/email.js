@@ -1,5 +1,3 @@
-// backend/index.js
-
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
@@ -11,19 +9,18 @@ dotenv.config();
 const PORT = process.env.PORT || 5000;
 const app = express();
 
-// Middleware
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: process.env.FRONTEND_URL,
   credentials: true
 }));
 app.use(express.json());
 
-// Connect MongoDB
+// MongoDB
 mongoose.connect(process.env.MONGODB_STRING)
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB connection failed:", err.message));
 
-// Nodemailer - Contact Form
+// Contact Form
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -38,7 +35,7 @@ app.post("/send-email", async (req, res) => {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "otengebenezer326@gmail.com",
+      to: "youremail@domain.com", // Your email
       subject: `Message from ${name}`,
       text: `Email: ${email}\n\nMessage:\n${message}`
     };
@@ -51,7 +48,7 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-// Nodemailer - Newsletter Subscription
+// Newsletter
 app.post("/subscribe", async (req, res) => {
   const { email } = req.body;
 
@@ -66,7 +63,7 @@ app.post("/subscribe", async (req, res) => {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "otengebenezer326@gmail.com",
+      to: "youremail@domain.com",
       subject: "New Newsletter Subscriber",
       text: `A new user has subscribed to your newsletter: ${email}`,
     };
@@ -79,7 +76,7 @@ app.post("/subscribe", async (req, res) => {
   }
 });
 
-// Review Schema & Model
+// Review Model
 const reviewSchema = new mongoose.Schema({
   name: String,
   comment: String,
@@ -88,7 +85,7 @@ const reviewSchema = new mongoose.Schema({
 
 const Review = mongoose.model("Review", reviewSchema);
 
-// POST: Create Review
+// Add Review
 app.post("/reviews", async (req, res) => {
   try {
     const { name, comment } = req.body;
@@ -105,7 +102,7 @@ app.post("/reviews", async (req, res) => {
   }
 });
 
-// GET: Fetch All Reviews
+// Get All Reviews
 app.get("/reviews", async (req, res) => {
   try {
     const reviews = await Review.find().sort({ date: -1 });
@@ -116,11 +113,4 @@ app.get("/reviews", async (req, res) => {
   }
 });
 
-// Global Error Handler
-app.use((err, req, res, next) => {
-  console.error("Unhandled Error:", err.stack);
-  res.status(500).send("Something broke!");
-});
-
-// Start Server
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
