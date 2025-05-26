@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -37,6 +37,16 @@ const Footer = () => {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    if (status && status.type === "success") {
+      const timer = setTimeout(() => {
+        setStatus(null); // Hide after 2 seconds
+      }, 2000);
+
+      return () => clearTimeout(timer); // Cleanup
+    }
+  }, [status]);
 
   return (
     <footer className="bg-black text-gray-300 py-10 px-6 sm:px-12">
@@ -123,7 +133,11 @@ const Footer = () => {
             </button>
           </form>
           {status && (
-            <p style={{ color: status.success ? "green" : "red" }}>
+            <p
+              className={`${
+                status.type !== "success" ? "text-red-500" : "text-green-500"
+              }`}
+            >
               {status.message}
             </p>
           )}
