@@ -131,7 +131,7 @@ const Reviews = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full py-4 px-6 rounded-xl mb-3"
+          className="w-full py-4 px-6 rounded-xl mb-3 border border-gray-500 placeholder:text-gray-700"
         />
         <textarea
           name="comment"
@@ -139,7 +139,7 @@ const Reviews = () => {
           value={formData.comment}
           onChange={handleChange}
           required
-          className="w-full py-4 px-6 rounded-xl"
+          className="w-full py-4 px-6 rounded-xl border border-gray-500 placeholder:text-gray-700"
           rows={4}
         />
         <button className="py-3 px-6 rounded-full bg-green-500 hover:bg-green-400 cursor-pointer" type="submit">Submit Review</button>

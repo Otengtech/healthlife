@@ -22,6 +22,15 @@ import Sleep from "./Sleep";
 import Strength from "./Strength";
 import PlantBased from "./PlantBased";
 import Motivation from "./Motivation";
+import BalancedDiet from "./BalanceDiet";
+import WeightManagement from "./WeightManagement";
+import LabelRead from "./LabelRead";
+import MealTimingFrequency from "./MealTimingFrequency";
+import FoodSensitivities from "./FoodSensitivities";
+import SportsNutrition from "./SportsNutrition";
+import HydrationEducation from "./HydrationEducation";
+import MindfulEating from "./MindfulEating";
+import SupplementsGuidance from "./SupplementsGuidance";
 
 function App() {
   // const [imageUrl, setImageUrl] = useState("");
@@ -67,6 +76,15 @@ function App() {
         <Route path="/aboutussection" element={<AboutUsSection />} />
         <Route path="/mentalwellness" element={<MentalWellness />} />
         <Route path="/energyfoods" element={<EnergyFoodGuide />} />
+        <Route path="/balancediet" element={<BalancedDiet />} />
+        <Route path="/labelread" element={<LabelRead />} />
+        <Route path="/supplements" element={<SupplementsGuidance />} />
+        <Route path="/mindfuleating" element={<MindfulEating />} />
+        <Route path="/hydrationeducation" element={<HydrationEducation />} />
+        <Route path="/sportsnutrition" element={<SportsNutrition />} />
+        <Route path="/foodsensitivities" element={<FoodSensitivities />} />
+        <Route path="/mealtiming" element={<MealTimingFrequency />} />
+        <Route path="/weightmanagement" element={<WeightManagement />} />
         <Route
           path="/nutritionCounseling"
           element={<NutritionalCounseling />}
