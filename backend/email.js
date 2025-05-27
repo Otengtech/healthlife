@@ -58,23 +58,36 @@ app.post("/subscribe", async (req, res) => {
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
-      }
+      },
     });
 
-    const mailOptions = {
+    // Email to you (admin)
+    const adminMailOptions = {
       from: process.env.EMAIL_USER,
-      to: "youremail@domain.com",
+      to: "otengebenezer326@gmail.com",
       subject: "New Newsletter Subscriber",
       text: `A new user has subscribed to your newsletter: ${email}`,
     };
 
-    await transporter.sendMail(mailOptions);
+    // Confirmation email to the subscriber
+    const subscriberMailOptions = {
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject: "Thank you for subscribing to HealthLife!",
+      text: `Hi there! 👋\n\nThank you for subscribing to HealthLife. You’ll now receive regular health tips, updates, and exclusive wellness content.\n\nStay healthy!\n\n— HealthLife Team`,
+    };
+
+    // Send both emails
+    await transporter.sendMail(adminMailOptions);
+    await transporter.sendMail(subscriberMailOptions);
+
     res.status(200).json({ message: "Subscribed successfully!" });
   } catch (error) {
     console.error("Newsletter subscription error:", error);
     res.status(500).json({ message: "Subscription failed." });
   }
 });
+
 
 // Review Model
 const reviewSchema = new mongoose.Schema({

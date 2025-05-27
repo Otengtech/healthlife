@@ -5,16 +5,15 @@ import {
   FaAppleAlt,
   FaHeartbeat,
 } from "react-icons/fa";
-import hydrationImg from "../assets/hydration.jpg"; // (Optional) Replace with a real hydration image
 
 const HydrationEducation = () => {
   return (
     <section className="w-full bg-white text-gray-800">
       {/* Hero Section */}
       <div className="relative">
-        <div className="w-full h-[350px] bg-green-600 rounded-b-lg"></div>
+        <div className="w-full h-[350px] rounded-b-lg"></div>
         <div className="absolute inset-0 flex items-center justify-center text-white text-center px-4">
-          <div>
+          <div className="text-gray-700">
             <h1 className="text-4xl font-bold mb-3 pt-8">Hydration</h1>
             <p className="text-lg max-w-2xl mx-auto">
               Staying hydrated is crucial for your body’s daily functions, energy levels, and overall health.
@@ -38,22 +37,22 @@ const HydrationEducation = () => {
           </ul>
         </div>
         <div className="grid grid-cols-2 gap-6 text-center">
-          <div className="bg-blue-100 cursor-pointer p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+          <div className="bg-blue-100 cursor-pointer p-3 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
             <FaTint className="text-4xl text-blue-600 mx-auto mb-2" />
             <h3 className="font-bold text-lg">Water</h3>
             <p className="text-sm">The best hydration source. Aim for 6–8 glasses daily depending on activity level.</p>
           </div>
-          <div className="bg-cyan-100 cursor-pointer p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+          <div className="bg-cyan-100 cursor-pointer p-3 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
             <FaGlassWhiskey className="text-4xl text-cyan-600 mx-auto mb-2" />
             <h3 className="font-bold text-lg">Electrolytes</h3>
             <p className="text-sm">Help maintain fluid balance, especially after intense workouts or hot weather.</p>
           </div>
-          <div className="bg-green-100 cursor-pointer p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+          <div className="bg-green-100 cursor-pointer p-3 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
             <FaAppleAlt className="text-4xl text-green-600 mx-auto mb-2" />
             <h3 className="font-bold text-lg">Hydrating Foods</h3>
             <p className="text-sm">Fruits and veggies like cucumber, watermelon, and oranges contribute to hydration.</p>
           </div>
-          <div className="bg-pink-100 cursor-pointer p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+          <div className="bg-pink-100 cursor-pointer p-3 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
             <FaHeartbeat className="text-4xl text-pink-500 mx-auto mb-2" />
             <h3 className="font-bold text-lg">Heart & Kidney Health</h3>
             <p className="text-sm">Proper hydration supports heart rate, blood pressure, and kidney function.</p>

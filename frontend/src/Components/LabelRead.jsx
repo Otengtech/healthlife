@@ -11,9 +11,9 @@ const LabelRead = () => {
     <section className="w-full bg-white text-gray-800">
       {/* Hero Section */}
       <div className="relative">
-        <div className="w-full h-[350px] bg-green-600 rounded-b-lg"></div>
+        <div className="w-full h-[350px] rounded-b-lg"></div>
         <div className="absolute inset-0 flex items-center justify-center text-white text-center px-4">
-          <div>
+          <div className="text-gray-700">
             <h1 className="text-4xl font-bold mb-3 pt-8">Reading Food Labels</h1>
             <p className="text-lg max-w-2xl mx-auto">
               Understanding food labels empowers you to make healthier, more informed nutrition choices every day.
@@ -37,22 +37,22 @@ const LabelRead = () => {
           </ul>
         </div>
         <div className="grid grid-cols-2 gap-6 text-center">
-          <div className="bg-yellow-100 cursor-pointer p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+          <div className="bg-yellow-100 cursor-pointer p-3 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
             <FaBarcode className="text-4xl text-yellow-600 mx-auto mb-2" />
             <h3 className="font-bold text-lg">Serving Size</h3>
             <p className="text-sm">Start by checking the serving size to understand the nutrient values per portion.</p>
           </div>
-          <div className="bg-orange-100 cursor-pointer p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+          <div className="bg-orange-100 cursor-pointer p-3 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
             <FaInfoCircle className="text-4xl text-orange-600 mx-auto mb-2" />
             <h3 className="font-bold text-lg">Ingredients List</h3>
             <p className="text-sm">Look for simple, recognizable ingredients and avoid items with many additives or preservatives.</p>
           </div>
-          <div className="bg-blue-100 cursor-pointer p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+          <div className="bg-blue-100 cursor-pointer p-3 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
             <FaBalanceScale className="text-4xl text-blue-600 mx-auto mb-2" />
             <h3 className="font-bold text-lg">Nutrient Content</h3>
             <p className="text-sm">Pay attention to fats, sugars, sodium, fiber, and protein to assess the food’s health impact.</p>
           </div>
-          <div className="bg-green-100 cursor-pointer p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+          <div className="bg-green-100 cursor-pointer p-3 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
             <FaAppleAlt className="text-4xl text-green-600 mx-auto mb-2" />
             <h3 className="font-bold text-lg">Allergens & Claims</h3>
             <p className="text-sm">Check for allergen warnings and any health claims like “gluten-free” or “organic” for better choices.</p>

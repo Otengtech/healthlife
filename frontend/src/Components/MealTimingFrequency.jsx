@@ -11,9 +11,9 @@ const MealTimingFrequency = () => {
     <section className="w-full bg-white text-gray-800">
       {/* Hero Section */}
       <div className="relative">
-        <div className="w-full h-[350px] bg-green-600 rounded-b-lg"></div>
+        <div className="w-full h-[350px] rounded-b-lg"></div>
         <div className="absolute inset-0 flex items-center justify-center text-white text-center px-4">
-          <div>
+          <div className="text-gray-700">
             <h1 className="text-4xl font-bold mb-3 pt-8">Meal Timing & Frequency</h1>
             <p className="text-lg max-w-2xl mx-auto">
               The timing and frequency of your meals can significantly impact your energy, metabolism, and overall health.
@@ -37,22 +37,22 @@ const MealTimingFrequency = () => {
           </ul>
         </div>
         <div className="grid grid-cols-2 gap-6 text-center">
-          <div className="bg-yellow-100 cursor-pointer p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+          <div className="bg-yellow-100 cursor-pointer p-3 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
             <FaClock className="text-4xl text-yellow-600 mx-auto mb-2" />
             <h3 className="font-bold text-lg">Regular Intervals</h3>
             <p className="text-sm">Eating meals every 3-4 hours helps maintain energy and keeps hunger at bay.</p>
           </div>
-          <div className="bg-orange-100 cursor-pointer p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+          <div className="bg-orange-100 cursor-pointer p-3 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
             <FaUtensils className="text-4xl text-orange-600 mx-auto mb-2" />
             <h3 className="font-bold text-lg">Balanced Meals</h3>
             <p className="text-sm">Include protein, carbs, and fats in each meal for sustained fullness and nutrient supply.</p>
           </div>
-          <div className="bg-blue-100 cursor-pointer p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+          <div className="bg-blue-100 cursor-pointer p-3 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
             <FaRegCalendarAlt className="text-4xl text-blue-600 mx-auto mb-2" />
             <h3 className="font-bold text-lg">Meal Timing Strategies</h3>
             <p className="text-sm">Explore intermittent fasting, smaller frequent meals, or intuitive eating based on your needs.</p>
           </div>
-          <div className="bg-green-100 cursor-pointer p-6 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+          <div className="bg-green-100 cursor-pointer p-3 rounded-lg shadow-md hover:scale-105 transition-all duration-300">
             <FaHeartbeat className="text-4xl text-green-600 mx-auto mb-2" />
             <h3 className="font-bold text-lg">Listen to Your Body</h3>
             <p className="text-sm">Adjust meal frequency and timing to your hunger cues and daily routine for optimal health.</p>
