@@ -1,15 +1,25 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
+
 const API_URL = import.meta.env.VITE_API_URL;
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
+    if (!isValidEmail(email)) {
+      setStatus({ type: "error", message: "Please enter a valid email." });
+      return;
+    }
+
     try {
+      setLoading(true);
       const res = await fetch(`${API_URL}/subscribe`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -29,6 +39,8 @@ const Footer = () => {
     } catch (error) {
       setStatus({ type: "error", message: "Network error, please try again." });
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -128,9 +140,14 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="bg-green-500 hover:bg-green-400 text-white px-4 py-2 rounded text-sm transition duration-300"
+              disabled={loading}
+              className={`${
+                loading
+                  ? "bg-green-300 cursor-not-allowed"
+                  : "bg-green-500 hover:bg-green-400"
+              } text-white px-4 py-2 rounded text-sm transition duration-300`}
             >
-              Subscribe
+              {loading ? "Subscribing..." : "Subscribe"}
             </button>
           </form>
           {status && (
