@@ -13,6 +13,7 @@ const Footer = () => {
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
+
     if (!isValidEmail(email)) {
       setStatus({ type: "error", message: "Please enter a valid email." });
       return;
@@ -20,10 +21,13 @@ const Footer = () => {
 
     try {
       setLoading(true);
+
+      const formData = new FormData();
+      formData.append("email", email);
+
       const res = await fetch(`${API_URL}/subscribe`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: formData, // no headers needed!
       });
 
       const data = await res.json();

@@ -3,6 +3,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
+import multer from "multer"
 
 dotenv.config();
 
@@ -15,6 +16,8 @@ app.use(cors({
   credentials: true,
 }));
 app.use(express.json());
+
+const upload = multer();
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_STRING, {
@@ -66,7 +69,8 @@ app.post("/send-email", async (req, res) => {
 /* ------------------------------------------
    ✅ NEWSLETTER SUBSCRIBE (Admin + User Mail)
 ------------------------------------------ */
-app.post("/subscribe", async (req, res) => {
+// Route with FormData support
+app.post("/subscribe", upload.none(), async (req, res) => {
   console.log("Received body:", req.body);
   const { email } = req.body;
 
@@ -91,7 +95,7 @@ app.post("/subscribe", async (req, res) => {
       text: `A new user has subscribed to your newsletter: ${email}`,
     };
 
-    // Confirmation Email to Subscriber
+    // Email to Subscriber
     const subscriberMailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
