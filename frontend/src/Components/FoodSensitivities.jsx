@@ -13,7 +13,7 @@ const FoodSensitivities = () => {
       <div className="relative">
         <div className="w-full h-[350px] rounded-b-lg"></div>
         <div className="absolute inset-0 flex items-center justify-center text-white text-center px-4">
-          <div className="text-gray-7003>
+          <div className="text-gray-700">
             <h1 className="text-4xl font-bold mb-3 pt-8">Food Sensitivities</h1>
             <p className="text-lg max-w-2xl mx-auto">
               Understanding food sensitivities helps reduce discomfort, improve digestion, and support overall health.
