@@ -62,6 +62,7 @@ app.post("/send-email", async (req, res) => {
    ✅ NEWSLETTER SUBSCRIBE (Admin + User Mail)
 ------------------------------------------ */
 app.post("/subscribe", async (req, res) => {
+  console.log("Received body:", req.body);
   const { email } = req.body;
 
   if (!email) {
