@@ -24,6 +24,11 @@ mongoose.connect(process.env.MONGODB_STRING, {
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB connection failed:", err.message));
 
+
+app.get("/", (req, res) => {
+  res.send("Welcome to HealthLife API!");
+});
+
 /* ------------------------------------------
    ✅ CONTACT FORM (Sends to Admin)
 ------------------------------------------ */
