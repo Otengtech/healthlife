@@ -6,23 +6,33 @@ import nodemailer from "nodemailer";
 
 dotenv.config();
 
-const PORT = process.env.PORT || 5000;
 const app = express();
+const PORT = process.env.PORT || 5000;
 
+// Middlewares
 app.use(cors({
   origin: process.env.FRONTEND_URL,
-  credentials: true
+  credentials: true,
 }));
 app.use(express.json());
 
-// MongoDB
-mongoose.connect(process.env.MONGODB_STRING)
+// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_STRING, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB connection failed:", err.message));
 
-// Contact Form
+/* ------------------------------------------
+   ✅ CONTACT FORM (Sends to Admin)
+------------------------------------------ */
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
+
+  if (!name || !email || !message) {
+    return res.status(400).json({ message: "All fields are required" });
+  }
 
   try {
     const transporter = nodemailer.createTransport({
@@ -35,9 +45,9 @@ app.post("/send-email", async (req, res) => {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "otengebenezer326@gmail.com", // Your email
+      to: "otengebenezer326@gmail.com", // Admin email
       subject: `Message from ${name}`,
-      text: `Email: ${email}\n\nMessage:\n${message}`
+      text: `Email: ${email}\n\nMessage:\n${message}`,
     };
 
     await transporter.sendMail(mailOptions);
@@ -48,9 +58,15 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-// Newsletter
+/* ------------------------------------------
+   ✅ NEWSLETTER SUBSCRIBE (Admin + User Mail)
+------------------------------------------ */
 app.post("/subscribe", async (req, res) => {
   const { email } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ message: "Email is required" });
+  }
 
   try {
     const transporter = nodemailer.createTransport({
@@ -61,7 +77,7 @@ app.post("/subscribe", async (req, res) => {
       },
     });
 
-    // Email to you (admin)
+    // Email to Admin
     const adminMailOptions = {
       from: process.env.EMAIL_USER,
       to: "otengebenezer326@gmail.com",
@@ -69,7 +85,7 @@ app.post("/subscribe", async (req, res) => {
       text: `A new user has subscribed to your newsletter: ${email}`,
     };
 
-    // Confirmation email to the subscriber
+    // Confirmation Email to Subscriber
     const subscriberMailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
@@ -77,7 +93,6 @@ app.post("/subscribe", async (req, res) => {
       text: `Hi there! 👋\n\nThank you for subscribing to HealthLife. You’ll now receive regular health tips, updates, and exclusive wellness content.\n\nStay healthy!\n\n— HealthLife Team`,
     };
 
-    // Send both emails
     await transporter.sendMail(adminMailOptions);
     await transporter.sendMail(subscriberMailOptions);
 
@@ -88,24 +103,26 @@ app.post("/subscribe", async (req, res) => {
   }
 });
 
-
-// Review Model
+/* ------------------------------------------
+   ✅ REVIEW SCHEMA AND ROUTES
+------------------------------------------ */
 const reviewSchema = new mongoose.Schema({
-  name: String,
-  comment: String,
+  name: { type: String, required: true },
+  comment: { type: String, required: true },
   date: { type: Date, default: Date.now },
 });
 
 const Review = mongoose.model("Review", reviewSchema);
 
-// Add Review
+// Create Review
 app.post("/reviews", async (req, res) => {
-  try {
-    const { name, comment } = req.body;
-    if (!name || !comment) {
-      return res.status(400).json({ error: "Name and comment are required" });
-    }
+  const { name, comment } = req.body;
 
+  if (!name || !comment) {
+    return res.status(400).json({ error: "Name and comment are required" });
+  }
+
+  try {
     const review = new Review({ name, comment });
     await review.save();
     res.status(201).json(review);
@@ -119,11 +136,16 @@ app.post("/reviews", async (req, res) => {
 app.get("/reviews", async (req, res) => {
   try {
     const reviews = await Review.find().sort({ date: -1 });
-    res.json(reviews);
+    res.status(200).json(reviews);
   } catch (err) {
     console.error("Error fetching reviews:", err);
     res.status(500).json({ error: "Failed to fetch reviews" });
   }
 });
 
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+/* ------------------------------------------
+   ✅ SERVER START
+------------------------------------------ */
+app.listen(PORT, () => {
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
+});
