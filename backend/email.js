@@ -3,7 +3,6 @@ import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
-import multer from "multer"
 
 dotenv.config();
 
@@ -16,8 +15,6 @@ app.use(cors({
   credentials: true,
 }));
 app.use(express.json());
-
-const upload = multer();
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_STRING, {
@@ -63,53 +60,6 @@ app.post("/send-email", async (req, res) => {
   } catch (error) {
     console.error("Error sending email:", error);
     res.status(500).json({ message: "Error sending email" });
-  }
-});
-
-/* ------------------------------------------
-   ✅ NEWSLETTER SUBSCRIBE (Admin + User Mail)
------------------------------------------- */
-// Route with FormData support
-app.post("/subscribe", upload.none(), async (req, res) => {
-  console.log("Received body:", req.body);
-  const { email } = req.body;
-
-  if (!email) {
-    return res.status(400).json({ message: "Email is required" });
-  }
-
-  try {
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    // Email to Admin
-    const adminMailOptions = {
-      from: process.env.EMAIL_USER,
-      to: "otengebenezer326@gmail.com",
-      subject: "New Newsletter Subscriber",
-      text: `A new user has subscribed to your newsletter: ${email}`,
-    };
-
-    // Email to Subscriber
-    const subscriberMailOptions = {
-      from: process.env.EMAIL_USER,
-      to: email,
-      subject: "Thank you for subscribing to HealthLife!",
-      text: `Hi there! 👋\n\nThank you for subscribing to HealthLife. You’ll now receive regular health tips, updates, and exclusive wellness content.\n\nStay healthy!\n\n— HealthLife Team`,
-    };
-
-    await transporter.sendMail(adminMailOptions);
-    await transporter.sendMail(subscriberMailOptions);
-
-    res.status(200).json({ message: "Subscribed successfully!" });
-  } catch (error) {
-    console.error("Newsletter subscription error:", error);
-    res.status(500).json({ message: "Subscription failed." });
   }
 });
 
