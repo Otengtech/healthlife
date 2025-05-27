@@ -62,7 +62,6 @@ const Reviews = () => {
       if (res.ok) {
         setSubmitStatus({ success: true, message: "Review submitted!" });
         setFormData({ name: "", comment: "" });
-        // Refresh the reviews list to include the new one
         fetchReviews();
       } else {
         setSubmitStatus({
