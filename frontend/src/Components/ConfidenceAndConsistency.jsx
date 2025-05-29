@@ -35,7 +35,7 @@ const ConfidenceAndConsistency = () => {
   ];
 
   return (
-    <section className="bg-white px-6S md:px-16 py-10">
+    <section className="bg-white px-6 md:px-16 py-10">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
         How to Build Confidence & Consistency
       </h2>
@@ -61,7 +61,7 @@ const ConfidenceAndConsistency = () => {
         </div>
 
         {/* Right side: Cards */}
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-6">
           {tips.map((tip, index) => (
             <div
               key={index}

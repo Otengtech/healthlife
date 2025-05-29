@@ -112,6 +112,13 @@ const Reviews = () => {
                       {new Date(date).toLocaleDateString()}
                     </p>
                     <p className="text-gray-700">{comment}</p>
+                    <div className="flex items-center justify-start space-x-1">
+                      <i className="text-green-500 mt-3 text-xl fa-solid fa-star"></i>
+                      <i className="text-green-500 mt-3 text-xl fa-solid fa-star"></i>
+                      <i className="text-green-500 mt-3 text-xl fa-solid fa-star"></i>
+                      <i className="text-green-500 mt-3 text-xl fa-solid fa-star"></i>
+                      <i className="text-green-500 mt-3 text-xl fa-solid fa-star"></i>
+                    </div>
                   </div>
                 ))}
               </div>
