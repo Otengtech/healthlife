@@ -114,7 +114,7 @@ const MentalWellness = () => {
               <img
                 src={mentalPracticeImages[practice.title]}
                 alt={practice.title}
-                className="w-full h-64 mb-4"
+                className="w-full h-48 mb-4"
               />
               <h3 className="text-xl font-semibold text-center text-green-500 group-hover:text-green-400">
                 {practice.title}
