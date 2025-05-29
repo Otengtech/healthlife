@@ -42,6 +42,9 @@ import ricketsImg from "../assets/rickets.jpg";
 import pellagraImg from "../assets/pellagra.jpg";
 import beriberiImg from "../assets/beriberi.jpg";
 import nightBlindnessImg from "../assets/night-blindness.jpg";
+import ConfidenceAndConsistency from "./ConfidenceAndConsistency";
+
+import { FaBrain, FaCarrot, FaRunning } from "react-icons/fa"
 
 const HealthyFoods = () => {
   const sentences = [
@@ -55,17 +58,20 @@ const HealthyFoods = () => {
 
   const services = [
     {
+      icon: <FaRunning className="text-red-400 text-center text-4xl"/>,
       title: "Personal Training",
       description:
         "Tailored fitness programs to meet your specific goals and needs.",
       to: "/personaltraining",
     },
     {
+      icon: <FaCarrot className="text-yellow-400 text-center text-4xl"/>,
       title: "Nutrition Counseling",
       description: "Get expert advice on your diet and eating habits.",
       to: "/nutritioncounseling",
     },
     {
+      icon: <FaBrain className="text-green-500 text-center text-4xl"/>,
       title: "Mental Wellness",
       description:
         "Support your mental health through mindfulness and counseling.",
@@ -490,14 +496,10 @@ const HealthyFoods = () => {
           {/* Buttons */}
           <motion.div className="flex md:flex-row justify-center md:justify-start items-center gap-4 mt-6">
             <button className="bg-gray-700 shadow-lg hover:bg-gray-600 text-white px-8 py-3 rounded-full font-semibold transition">
-              <Link to="/blog">
-                Blog
-              </Link>
+              <Link to="/blog">Blog</Link>
             </button>
             <button className="bg-green-500 shadow-lg hover:bg-green-400 text-gray-100 px-6 py-3 rounded-full font-semibold transition">
-              <Link to="/recipe">
-                Recipes
-              </Link>
+              <Link to="/recipe">Recipes</Link>
             </button>
           </motion.div>
 
@@ -535,6 +537,7 @@ const HealthyFoods = () => {
                 initial={{ opacity: 0, y: 40 }}
                 transition={{ duration: 0.4 }}
               >
+                <div className="w-full flex justify-center my-3">{service.icon}</div>
                 <h3 className="text-2xl font-semibold text-green-700 mb-3">
                   {service.title}
                 </h3>
@@ -550,6 +553,8 @@ const HealthyFoods = () => {
           </div>
         </div>
       </section>
+
+      <ConfidenceAndConsistency />
       {/* MODAL */}
       {selectedService && (
         <motion.div
@@ -635,7 +640,7 @@ const HealthyFoods = () => {
                   <motion.img
                     src={food.image}
                     alt={food.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 rounded-lg object-cover"
                     animate={{ y: [0, -5, 0] }}
                     transition={{ repeat: Infinity, duration: 3 }}
                   />

@@ -10,6 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middlewares
+// app.use(cors());
 app.use(cors({
   origin: process.env.FRONTEND_URL,
   credentials: true,
@@ -27,6 +28,44 @@ mongoose.connect(process.env.MONGODB_STRING, {
 
 app.get("/", (req, res) => {
   res.send("Welcome to HealthLife API!");
+});
+
+// Newsletter Section
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
+
+app.post("/api/subscribe", async (req, res) => {
+  const { email } = req.body;
+
+  if (!email) return res.status(400).json({ message: "Email is required." });
+
+  try {
+    // Send confirmation to subscriber
+    await transporter.sendMail({
+      from: "HealthLife Newsletter otengebenezer326@gmail.com",
+      to: email,
+      subject: "Subscription Confirmed!",
+      text: `Thank you for subscribing to HealthLife. Stay tuned for wellness tips!`,
+    });
+
+    // Send notification to admin
+    await transporter.sendMail({
+      from: `"New Subscriber" ${process.env.EMAIL_USER}`,
+      to: process.env.EMAIL_USER,
+      subject: "New Newsletter Subscriber",
+      text: `New subscription: ${email}`,
+    });
+
+    res.status(200).json({ message: "Subscription successful! Check your email." });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Something went wrong. Try again later." });
+  }
 });
 
 /* ------------------------------------------
@@ -52,7 +91,7 @@ app.post("/send-email", async (req, res) => {
       from: process.env.EMAIL_USER,
       to: "otengebenezer326@gmail.com", // Admin email
       subject: `Message from ${name}`,
-      text: `Email: ${email}\n\nMessage:\n${message}`,
+      text: `Email: ${email}\n\nMessage: ${ message}`,
     };
 
     await transporter.sendMail(mailOptions);

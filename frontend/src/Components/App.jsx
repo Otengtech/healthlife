@@ -31,6 +31,18 @@ import SportsNutrition from "./SportsNutrition";
 import HydrationEducation from "./HydrationEducation";
 import MindfulEating from "./MindfulEating";
 import SupplementsGuidance from "./SupplementsGuidance";
+import AvocadoToast from "./AvocadoToast";
+import GrilledChickenSalad from "./GrilledChickenSalad";
+import QuinoaVeggieBowl from "./QuinoaVeggieBowl";
+import BerrySmoothie from "./BerrySmoothie";
+import ChickpeaStirFry from "./ChickpeaStirFry";
+import OatmealWithFruits from "./OatmealWithFruits";
+import ZucchiniNoodles from "./ZucchiniNoodles";
+import BakedSalmonAsparagus from "./BakedSalmonAsparagus";
+import GreekYogurtParfait from "./GreekYogurtParfait";
+import StuffedBellPeppers from "./Stuffed Bell Peppers";
+import LentilSoup from "./LentilSoup";
+import EggVeggieMuffins from "./EggVeggieMuffins";
 
 function App() {
   // const [imageUrl, setImageUrl] = useState("");
@@ -78,6 +90,18 @@ function App() {
         <Route path="/energyfoods" element={<EnergyFoodGuide />} />
         <Route path="/balancediet" element={<BalancedDiet />} />
         <Route path="/labelread" element={<LabelRead />} />
+        <Route path="/qvb" element={<QuinoaVeggieBowl />} />
+        <Route path="/berrysmoothie" element={<BerrySmoothie />} />
+        <Route path="/csf" element={<ChickpeaStirFry />} />
+        <Route path="/zucchininoodles" element={<ZucchiniNoodles />} />
+        <Route path="/oatmeal" element={<OatmealWithFruits />} />
+        <Route path="/bsa" element={<BakedSalmonAsparagus />} />
+        <Route path="/avocadotoast" element={<AvocadoToast />} />
+        <Route path="/gcs" element={<GrilledChickenSalad />} />
+        <Route path="/gyp" element={<GreekYogurtParfait />} />
+        <Route path="/sbp" element={<StuffedBellPeppers />} />
+        <Route path="/lentilsoup" element={<LentilSoup />} />
+        <Route path="/evm" element={<EggVeggieMuffins />} />
         <Route path="/supplements" element={<SupplementsGuidance />} />
         <Route path="/mindfuleating" element={<MindfulEating />} />
         <Route path="/hydrationeducation" element={<HydrationEducation />} />
@@ -105,7 +129,6 @@ function App() {
           element={
             <h1 className="text-center text-red-500 mt-10">
               404 - Page Not Found
-              
             </h1>
           }
         />

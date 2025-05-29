@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Footer from "./Footer";
+import {Link} from "react-router-dom"
 
 import avocadoToastImg from "../assets/avocado-toast.jpg";
 import grilledChickenSaladImg from "../assets/gcs.jpg";
@@ -38,6 +39,7 @@ const recipes = [
     ingredients: ["Bread", "Avocado", "Lemon", "Salt", "Chili flakes"],
     steps: ["Toast bread", "Mash avocado", "Add lemon juice", "Spread & sprinkle chili flakes"],
     nutrition: "250 kcal | 10g protein | 15g fat",
+    to: "/avocadotoast",
   },
   {
     id: 2,
@@ -46,6 +48,7 @@ const recipes = [
     ingredients: ["Chicken breast", "Lettuce", "Tomatoes", "Olive oil", "Lemon juice"],
     steps: ["Grill chicken", "Chop veggies", "Mix dressing", "Combine & serve"],
     nutrition: "350 kcal | 30g protein | 10g fat",
+    to: "/gcs",
   },
   {
     id: 3,
@@ -54,6 +57,7 @@ const recipes = [
     ingredients: ["Quinoa", "Cucumber", "Bell peppers", "Cherry tomatoes", "Lemon juice"],
     steps: ["Cook quinoa", "Chop veggies", "Mix all ingredients", "Drizzle lemon juice"],
     nutrition: "320 kcal | 12g protein | 8g fat",
+    to: "/qvb",
   },
   {
     id: 4,
@@ -62,6 +66,7 @@ const recipes = [
     ingredients: ["Strawberries", "Blueberries", "Banana", "Greek yogurt", "Honey"],
     steps: ["Add ingredients to blender", "Blend until smooth", "Serve chilled"],
     nutrition: "180 kcal | 6g protein | 2g fat",
+    to: "/berrysmoothie",
   },
   {
     id: 5,
@@ -70,6 +75,7 @@ const recipes = [
     ingredients: ["Chickpeas", "Onion", "Bell peppers", "Spinach", "Garlic"],
     steps: ["Sauté garlic & onion", "Add chickpeas & veggies", "Stir fry with spices"],
     nutrition: "300 kcal | 14g protein | 7g fat",
+    to: "/csf",
   },
   {
     id: 6,
@@ -78,6 +84,7 @@ const recipes = [
     ingredients: ["Oats", "Milk or almond milk", "Banana", "Berries", "Almonds"],
     steps: ["Cook oats", "Top with fruits & nuts", "Serve warm"],
     nutrition: "250 kcal | 8g protein | 5g fat",
+    to: "/oatmeal",
   },
   {
     id: 7,
@@ -86,6 +93,7 @@ const recipes = [
     ingredients: ["Zucchini", "Pesto", "Cherry tomatoes", "Olive oil", "Parmesan"],
     steps: ["Spiralize zucchini", "Sauté briefly", "Toss with pesto & tomatoes"],
     nutrition: "200 kcal | 7g protein | 10g fat",
+    to: "/zucchininoodles",
   },
   {
     id: 8,
@@ -94,6 +102,7 @@ const recipes = [
     ingredients: ["Salmon fillet", "Asparagus", "Olive oil", "Lemon", "Garlic"],
     steps: ["Season salmon", "Place on tray with asparagus", "Bake at 400°F for 15-20 min"],
     nutrition: "400 kcal | 35g protein | 20g fat",
+    to: "/bsa",
   },
   {
     id: 9,
@@ -102,6 +111,7 @@ const recipes = [
     ingredients: ["Greek yogurt", "Granola", "Strawberries", "Blueberries", "Honey"],
     steps: ["Layer yogurt, fruits, granola", "Drizzle with honey", "Serve cold"],
     nutrition: "220 kcal | 10g protein | 5g fat",
+    to: "/gyp",
   },
   {
     id: 10,
@@ -110,6 +120,7 @@ const recipes = [
     ingredients: ["Lentils", "Carrots", "Onion", "Celery", "Vegetable broth"],
     steps: ["Sauté veggies", "Add lentils & broth", "Simmer until tender"],
     nutrition: "280 kcal | 16g protein | 6g fat",
+    to: "/lentilsoup",
   },
   {
     id: 11,
@@ -118,6 +129,7 @@ const recipes = [
     ingredients: ["Bell peppers", "Quinoa", "Black beans", "Corn", "Tomato sauce"],
     steps: ["Prepare filling", "Stuff peppers", "Bake for 25 min"],
     nutrition: "330 kcal | 12g protein | 9g fat",
+    to: "/sbp",
   },
   {
     id: 12,
@@ -126,12 +138,12 @@ const recipes = [
     ingredients: ["Eggs", "Spinach", "Tomatoes", "Bell peppers", "Cheese"],
     steps: ["Whisk eggs", "Add chopped veggies", "Pour into muffin tin", "Bake at 375°F for 20 min"],
     nutrition: "150 kcal | 10g protein | 7g fat",
+    to: "/evm",
   },
 ];
 
 const RecipeSection = () => {
   const [search, setSearch] = useState("");
-  const [selected, setSelected] = useState(null);
 
   const filtered = recipes.filter((r) =>
     r.title.toLowerCase().includes(search.toLowerCase())
@@ -174,48 +186,16 @@ const RecipeSection = () => {
               <div className="p-5">
                 <h3 className="text-xl font-semibold text-green-600 mb-2">{recipe.title}</h3>
                 <p className="text-sm text-gray-600 mb-4">{recipe.description}</p>
-                <button
-                  onClick={() => setSelected(recipe)}
+                <Link to={recipe.to}
                   className="bg-green-500 hover:bg-green-400 text-white px-4 py-2 rounded transition"
                 >
                   More Info
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {selected && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full relative animate-fadeIn">
-              <button
-                onClick={() => setSelected(null)}
-                className="absolute top-2 right-2 text-green-500 font-bold text-xl"
-              >
-                <i className="fa-solid fa-circle-xmark"></i>
-              </button>
-              <h3 className="text-2xl font-bold text-green-600 mb-3">{selected.title}</h3>
-              <img
-                src={recipeImages[selected.title]}
-                alt={selected.title}
-                className="rounded mb-4"
-              />
-              <p className="text-gray-700 mb-2">
-                <strong>Description:</strong> {selected.description}
-              </p>
-              <p className="text-gray-700 mb-2">
-                <strong>Ingredients:</strong> {selected.ingredients.join(", ")}
-              </p>
-              <p className="text-gray-700 mb-2">
-                <strong>Steps:</strong> {selected.steps.join(" → ")}
-              </p>
-              <p className="text-gray-700">
-                <strong>Nutrition:</strong> {selected.nutrition}
-              </p>
-            </div>
-          </div>
-        )}
-      </section>
+        </section>
       <Footer />
     </>
   );
