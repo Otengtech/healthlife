@@ -111,7 +111,7 @@ const Footer = () => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             required
-            className="px-4 py-2 rounded-md w-full sm:w-96 focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="px-4 py-2 text-gray-700 placeholder:text-gray-500 rounded-md w-full sm:w-96 focus:outline-none focus:ring-2 focus:ring-green-400"
           />
           <button
             type="submit"
