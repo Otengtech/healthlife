@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "./Footer";
 
-import strengthTrainingImg from '../assets/strength-training.jpg';
-import cardioImg from '../assets/cardio.jpg';
-import functionalTrainingImg from '../assets/functional-training.jpg';
-import sportTrainingImg from '../assets/sport-training.jpg';
-import groupTrainingImg from '../assets/group-training.jpg';
-import fitnessAssessmentImg from '../assets/fitness-assessment.jpg';
+import strengthTrainingImg from '../assets/strength-training.webp';
+import cardioImg from '../assets/cardio.webp';
+import functionalTrainingImg from '../assets/functional-training.webp';
+import sportTrainingImg from '../assets/sport-training.webp';
+import groupTrainingImg from '../assets/group-training.webp';
+import fitnessAssessmentImg from '../assets/fitness-assessment.webp';
 
 const practiceImages = {
   "Strength Training": strengthTrainingImg,

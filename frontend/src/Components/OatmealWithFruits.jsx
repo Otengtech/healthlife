@@ -11,7 +11,7 @@ import {
   GiSpoon,
   GiWheat,
 } from "react-icons/gi";
-import oatmealImg from "../assets/oatmeal-fruits.jpg"; // update with correct path
+import oatmealImg from "../assets/oatmeal-fruits.webp"; // update with correct path
 
 const OatmealWithFruits = () => {
   const sectionRef = useRef(null);

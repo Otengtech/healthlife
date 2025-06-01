@@ -5,7 +5,7 @@ import {
   FaInfoCircle,
   FaLeaf,
 } from "react-icons/fa";
-import parfaitImg from "../assets/yogurt-parfait.jpg"; // Update image path
+import parfaitImg from "../assets/yogurt-parfait.webp"; // Update image path
 
 const GreekYogurtParfait = () => {
   const sectionRef = useRef(null);

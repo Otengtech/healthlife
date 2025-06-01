@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 import Footer from "./Footer";
 
-import meditationImg from '../assets/meditation.jpg';
-import journalingImg from '../assets/journaling.jpg';
-import therapyImg from '../assets/therapy.jpg';
-import breathingImg from '../assets/breathing.jpg';
-import natureWalksImg from '../assets/nature-walks.jpg';
-import digitalDetoxImg from '../assets/digital-detox.jpg';
-import affirmationsImg from '../assets/affirmations.jpg';
-import artTherapyImg from '../assets/art-therapy.jpg';
-import gratitudeImg from '../assets/gratitude.jpg';
-import mindfulEatingImg from '../assets/mindful-eating.jpg';
+import meditationImg from '../assets/meditation.webp';
+import journalingImg from '../assets/journaling.webp';
+import therapyImg from '../assets/therapy.webp';
+import breathingImg from '../assets/breathing.webp';
+import natureWalksImg from '../assets/nature-walks.webp';
+import digitalDetoxImg from '../assets/digital-detox.webp';
+import affirmationsImg from '../assets/affirmations.webp';
+import artTherapyImg from '../assets/art-therapy.webp';
+import gratitudeImg from '../assets/gratitude.webp';
+import mindfulEatingImg from '../assets/mindful-eating.webp';
 
 const mentalPracticeImages = {
   "Meditation": meditationImg,

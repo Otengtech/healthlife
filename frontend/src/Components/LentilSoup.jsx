@@ -5,7 +5,7 @@ import {
   FaInfoCircle,
   FaLeaf,
 } from "react-icons/fa";
-import lentilSoupImg from "../assets/lentil-soup.jpg"; // Update image path
+import lentilSoupImg from "../assets/lentil-soup.webp"; // Update image path
 
 const LentilSoup = () => {
   const sectionRef = useRef(null);

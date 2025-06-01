@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 // Images
-import superfoodsMain from "../assets/wall8.jpg";
-import berries from "../assets/berries.jpg";
-import quinoa from "../assets/quinoa.jpg";
-import salmon from "../assets/salmon.jpg";
-import kale from "../assets/kale.jpg";
-import avocado from "../assets/avocado.jpg";
-import greenTea from "../assets/green-tea.jpg";
-import sweetPotato from "../assets/sweet-potato.jpg";
-import greekYogurt from "../assets/greek-yogurt.jpg";
+import superfoodsMain from "../assets/wall8.webp";
+import berries from "../assets/berries.webp";
+import quinoa from "../assets/quinoa.webp";
+import salmon from "../assets/salmon.webp";
+import kale from "../assets/kale.webp";
+import avocado from "../assets/avocado.webp";
+import greenTea from "../assets/green-tea.webp";
+import sweetPotato from "../assets/sweet-potato.webp";
+import greekYogurt from "../assets/greek-yogurt.webp";
 
 // Animation Variant
 const fadeUp = {

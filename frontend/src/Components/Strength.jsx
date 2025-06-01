@@ -1,8 +1,8 @@
 import React from "react";
-import strengthTraining from "../assets/strength-training.jpg";
-import resistanceBand from "../assets/resistance-band.jpg";
-import bodyweight from "../assets/bodyweight.jpg";
-import progressive from "../assets/progressive.jpg";
+import strengthTraining from "../assets/strength-training.webp";
+import resistanceBand from "../assets/resistance-band.webp";
+import bodyweight from "../assets/bodyweight.webp";
+import progressive from "../assets/progressive.webp";
 import Footer from "./Footer";
 
 const strengthTips = [

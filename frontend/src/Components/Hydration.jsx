@@ -1,8 +1,8 @@
 import React from "react";
-import waterGlass from "../assets/water-glass.jpg";
-import fruits from "../assets/hydrating-fruits.jpg";
-import reminder from "../assets/hydration-reminder.jpg";
-import workoutHydration from "../assets/workout-hydration.jpg";
+import waterGlass from "../assets/water-glass.webp";
+import fruits from "../assets/hydrating-fruits.webp";
+import reminder from "../assets/hydration-reminder.webp";
+import workoutHydration from "../assets/workout-hydration.webp";
 import Footer from "./Footer";
 
 const tips = [

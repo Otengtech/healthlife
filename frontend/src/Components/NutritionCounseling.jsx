@@ -2,15 +2,15 @@ import React from "react";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
-import balancedDietImg from "../assets/balanced-diet.jpg";
-import weightManagementImg from "../assets/weight-management.jpg";
-import labelReadingImg from "../assets/label-reading.jpg";
-import mealTimingImg from "../assets/meal-timing.jpg";
-import foodSensitivitiesImg from "../assets/food-sensitivities.jpg";
-import sportsNutritionImg from "../assets/sports-nutrition.jpg";
-import hydrationImg from "../assets/hydration.jpg";
-import mindfulEatingImg from "../assets/mindful-eating-nutrition.jpg";
-import supplementsImg from "../assets/supplements.jpg";
+import balancedDietImg from "../assets/balanced-diet.";
+import weightManagementImg from "../assets/weight-management.";
+import labelReadingImg from "../assets/label-reading.";
+import mealTimingImg from "../assets/meal-timing.";
+import foodSensitivitiesImg from "../assets/food-sensitivities.";
+import sportsNutritionImg from "../assets/sports-nutrition.";
+import hydrationImg from "../assets/hydration.";
+import mindfulEatingImg from "../assets/mindful-eating-nutrition.";
+import supplementsImg from "../assets/supplements.";
 
 const counselingImages = {
   "Balanced Diet Planning": balancedDietImg,

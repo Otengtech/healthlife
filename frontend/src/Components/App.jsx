@@ -46,20 +46,6 @@ import EggVeggieMuffins from "./EggVeggieMuffins";
 import ScrollToTop from "./ScrollToTop";
 
 function App() {
-  // const [imageUrl, setImageUrl] = useState("");
-
-  // useEffect(() => {
-  //   const fetchImage = async () => {
-  //     try {
-  //       const res = await axios.get("http://localhost:5000/latest-image");
-  //       setImageUrl(res.data.url);
-  //     } catch (err) {
-  //       console.error("Error fetching image:", err);
-  //     }
-  //   };
-
-  //   fetchImage();
-  // }, []);
 
   return (
     <div className="bg-white min-h-screen">

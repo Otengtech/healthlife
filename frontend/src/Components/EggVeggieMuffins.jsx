@@ -5,7 +5,7 @@ import {
   FaInfoCircle,
   FaLeaf,
 } from "react-icons/fa";
-import eggVeggieMuffinsImg from "../assets/egg-muffins.jpg"; // Update with your image path
+import eggVeggieMuffinsImg from "../assets/egg-muffins.webp"; // Update with your image path
 
 const EggVeggieMuffins = () => {
   const sectionRef = useRef(null);

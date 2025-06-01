@@ -5,7 +5,7 @@ import {
   FaInfoCircle,
   FaLeaf,
 } from "react-icons/fa";
-import chickpeaImg from "../assets/chickpea-stirfry.jpg"; // Update image path
+import chickpeaImg from "../assets/chickpea-stirfry.webp"; // Update image path
 
 const ChickpeaStirFry = () => {
   const sectionRef = useRef(null);

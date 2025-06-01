@@ -1,8 +1,8 @@
 import React from "react";
-import variety from "../assets/plant-variety.jpg";
-import protein from "../assets/plant-protein.jpg";
-import fiber from "../assets/plant-fiber.jpg";
-import cooking from "../assets/plant-cooking.jpg";
+import variety from "../assets/plant-variety.webp";
+import protein from "../assets/plant-protein.webp";
+import fiber from "../assets/plant-fiber.webp";
+import cooking from "../assets/plant-cooking.webp";
 import Footer from "./Footer";
 
 const plantBasedTips = [

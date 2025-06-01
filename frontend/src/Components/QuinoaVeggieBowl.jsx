@@ -14,7 +14,7 @@ import {
   GiOlive,
   GiBroccoli,
 } from "react-icons/gi";
-import quinoaVeggieImg from "../assets/qvb.jpg"; // Update this path if necessary
+import quinoaVeggieImg from "../assets/qvb.webp"; // Update this path if necessary
 
 const QuinoaVeggieBowl = () => {
   const sectionRef = useRef(null);

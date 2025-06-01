@@ -1,8 +1,8 @@
 import React from "react";
-import sleepRoutine from "../assets/sleep.jpg";
-import bedroom from "../assets/bedroom-environment.jpg";
-import screenTime from "../assets/screen-time.jpg";
-import relaxation from "../assets/relaxation.jpg";
+import sleepRoutine from "../assets/sleep.webp";
+import bedroom from "../assets/bedroom-environment.webp";
+import screenTime from "../assets/screen-time.webp";
+import relaxation from "../assets/relaxation.webp";
 import Footer from "./Footer";
 
 const sleepTips = [

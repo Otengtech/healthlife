@@ -4,14 +4,14 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 // Images
-import superfoods from "../assets/superfoods.jpg";
-import morningWorkout from "../assets/morning-workout.jpg";
-import mindfulness from "../assets/mindfulness.jpg";
-import hydration2 from "../assets/hydration2.jpg";
-import sleep from "../assets/sleep.jpg";
-import strength from "../assets/strength.jpg";
-import plantBased from "../assets/plant-based.jpg";
-import motivation from "../assets/motivation.jpg";
+import superfoods from "../assets/superfoods.webp";
+import morningWorkout from "../assets/morning-workout.webp";
+import mindfulness from "../assets/mindfulness.webp";
+import hydration2 from "../assets/hydration2.webp";
+import sleep from "../assets/sleep.webp";
+import strength from "../assets/strength.webp";
+import plantBased from "../assets/plant-based.webp";
+import motivation from "../assets/motivation.webp";
 
 // Blog data
 const blogs = [

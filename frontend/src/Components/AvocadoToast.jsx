@@ -11,7 +11,7 @@ import {
   FaLightbulb,
 } from "react-icons/fa";
 import { GiOlive, GiHealthPotion } from "react-icons/gi";
-import avocadoImg from "../assets/avocado-toast.jpg";
+import avocadoImg from "../assets/avocado-toast.webp";
 
 const AvocadoToast = () => {
   const sectionRef = useRef(null);

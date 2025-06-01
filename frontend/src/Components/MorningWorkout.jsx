@@ -2,14 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // Images
-import warmUp from "../assets/warmup.jpg";
-import jumpingJacks from "../assets/jumpingjacks.jpg";
-import pushups from "../assets/pushups.jpg";
-import squats from "../assets/squats.jpg";
-import lunges from "../assets/lunges.jpg";
-import yoga from "../assets/yoga.jpg";
-import plank from "../assets/plank.jpg";
-import coolDown from "../assets/cooldown.jpg";
+import warmUp from "../assets/warmup.webp";
+import jumpingJacks from "../assets/jumpingjacks.webp";
+import pushups from "../assets/pushups.webp";
+import squats from "../assets/squats.webp";
+import lunges from "../assets/lunges.webp";
+import yoga from "../assets/yoga.webp";
+import plank from "../assets/plank.webp";
+import coolDown from "../assets/cooldown.webp";
 import Footer from "./Footer";
 
 // Animation variant

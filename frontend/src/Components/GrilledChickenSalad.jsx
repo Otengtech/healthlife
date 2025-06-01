@@ -9,7 +9,7 @@ import {
   FaPepperHot,
 } from "react-icons/fa";
 import { GiChickenOven, GiHealthPotion, GiOlive } from "react-icons/gi";
-import grilledChickenImg from "../assets/gcs.jpg"; // Make sure this path is correct
+import grilledChickenImg from "../assets/gcs.webp"; // Make sure this path is correct
 
 const GrilledChickenSalad = () => {
   const sectionRef = useRef(null);

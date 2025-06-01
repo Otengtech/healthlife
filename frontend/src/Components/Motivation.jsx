@@ -1,8 +1,8 @@
 import React from "react";
-import inspiration from "../assets/inspiration.jpg";
-import goalSetting from "../assets/goal-setting.jpg";
-import mindset from "../assets/mindset.jpg";
-import progress from "../assets/progress.jpg";
+import inspiration from "../assets/inspiration.webp";
+import goalSetting from "../assets/goal-setting.webp";
+import mindset from "../assets/mindset.webp";
+import progress from "../assets/progress.webp";
 import Footer from "./Footer";
 
 const motivationTips = [

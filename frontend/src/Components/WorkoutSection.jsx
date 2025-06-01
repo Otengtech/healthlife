@@ -4,18 +4,18 @@ import "../App.css";
 import Footer from "./Footer";
 import BMICalculator from "./BMICalculator";
 
-import pushupsImg from "../assets/pushups.jpg";
-import squatsImg from "../assets/squats.jpg";
-import plankImg from "../assets/plank.jpg";
-import burpeesImg from "../assets/burpees.jpg";
-import lungesImg from "../assets/lunges.jpg";
-import mountainClimbersImg from "../assets/mountainclimbers.jpg";
-import jumpingJacksImg from "../assets/jumpingjacks.jpg";
-import bicycleCrunchesImg from "../assets/bicyclecrunches.jpg";
-import gluteBridgesImg from "../assets/glutebridges.jpg";
-import tricepDipsImg from "../assets/tricepdips.jpg";
-import highKneesImg from "../assets/highknees.jpg";
-import jumpSquatsImg from "../assets/jumpsquats.jpg";
+import pushupsImg from "../assets/pushups.webp";
+import squatsImg from "../assets/squats.webp";
+import plankImg from "../assets/plank.webp";
+import burpeesImg from "../assets/burpees.webp";
+import lungesImg from "../assets/lunges.webp";
+import mountainClimbersImg from "../assets/mountainclimbers.webp";
+import jumpingJacksImg from "../assets/jumpingjacks.webp";
+import bicycleCrunchesImg from "../assets/bicyclecrunches.webp";
+import gluteBridgesImg from "../assets/glutebridges.webp";
+import tricepDipsImg from "../assets/tricepdips.webp";
+import highKneesImg from "../assets/highknees.webp";
+import jumpSquatsImg from "../assets/jumpsquats.webp";
 
 const workoutImages = {
   "Push-Ups": pushupsImg,

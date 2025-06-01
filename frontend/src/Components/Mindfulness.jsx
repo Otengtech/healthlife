@@ -1,9 +1,9 @@
 import React from "react";
-import meditation from "../assets/meditation.jpg";
-import breathing from "../assets/breathing.jpg";
-import natureWalk from "../assets/nature.jpg";
-import gratitude from "../assets/gratitude.jpg";
-import journal from "../assets/journaling.jpg";
+import meditation from "../assets/meditation.webp";
+import breathing from "../assets/breathing.webp";
+import natureWalk from "../assets/nature.webp";
+import gratitude from "../assets/gratitude.webp";
+import journal from "../assets/journaling.webp";
 import Footer from "./Footer";
 
 const practices = [

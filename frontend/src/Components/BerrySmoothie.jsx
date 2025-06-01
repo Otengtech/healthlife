@@ -7,7 +7,7 @@ import {
   FaGlassWhiskey,
 } from "react-icons/fa";
 import { GiHealthPotion, GiFruitBowl, GiMilkCarton } from "react-icons/gi";
-import berrySmoothieImg from "../assets/berry-smoothie.jpg"; // Update path if needed
+import berrySmoothieImg from "../assets/berry-smoothie.webp"; // Update path if needed
 
 const BerrySmoothie = () => {
   const sectionRef = useRef(null);

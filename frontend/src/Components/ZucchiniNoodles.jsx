@@ -5,7 +5,7 @@ import {
   FaInfoCircle,
   FaLeaf,
 } from "react-icons/fa";
-import zucchiniImg from "../assets/zucchini-noodles.jpg"; // ✅ Replace with actual image path
+import zucchiniImg from "../assets/zucchini-noodles.webp"; // ✅ Replace with actual image path
 
 const ZucchiniNoodles = () => {
   const sectionRef = useRef(null);

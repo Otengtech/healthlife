@@ -1,13 +1,13 @@
 import React from "react";
 import Footer from "./Footer";
 // Image imports
-import ingredientsImg from "../assets/ingredients.jpg";
-import cookCarbsImg from "../assets/cook-carbs.jpg";
-import leanProteinImg from "../assets/lean-protein.jpg";
-import healthyFatsImg from "../assets/healthy-fats.jpg";
-import vegetablesImg from "../assets/vegetables.jpg";
-import assembleImg from "../assets/assemble.jpg";
-import hydrateImg from "../assets/hydrate.jpg";
+import ingredientsImg from "../assets/ingredients.webp";
+import cookCarbsImg from "../assets/cook-carbs.webp";
+import leanProteinImg from "../assets/lean-protein.webp";
+import healthyFatsImg from "../assets/healthy-fats.webp";
+import vegetablesImg from "../assets/vegetables.webp";
+import assembleImg from "../assets/assemble.webp";
+import hydrateImg from "../assets/hydrate.webp";
 
 const energyFoodSteps = [
   {

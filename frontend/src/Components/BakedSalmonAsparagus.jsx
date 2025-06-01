@@ -5,7 +5,7 @@ import {
   FaInfoCircle,
   FaLeaf,
 } from "react-icons/fa";
-import salmonImg from "../assets/baked-salmon.jpg"; // Update with your image path
+import salmonImg from "../assets/baked-salmon.webp"; // Update with your image path
 
 const BakedSalmonAsparagus = () => {
   const sectionRef = useRef(null);

@@ -3,18 +3,18 @@ import { motion } from "framer-motion";
 import Footer from "./Footer";
 import {Link} from "react-router-dom"
 
-import avocadoToastImg from "../assets/avocado-toast.jpg";
-import grilledChickenSaladImg from "../assets/gcs.jpg";
-import quinoaVeggieBowlImg from "../assets/qvb.jpg";
-import berrySmoothieImg from "../assets/berry-smoothie.jpg";
-import chickpeaStirFryImg from "../assets/chickpea-stirfry.jpg";
-import oatmealFruitsImg from "../assets/oatmeal-fruits.jpg";
-import zucchiniNoodlesImg from "../assets/zucchini-noodles.jpg";
-import bakedSalmonImg from "../assets/baked-salmon.jpg";
-import yogurtParfaitImg from "../assets/yogurt-parfait.jpg";
-import lentilSoupImg from "../assets/lentil-soup.jpg";
-import stuffedPeppersImg from "../assets/stuffed-peppers.jpg";
-import eggMuffinsImg from "../assets/egg-muffins.jpg";
+import avocadoToastImg from "../assets/avocado-toast.webp";
+import grilledChickenSaladImg from "../assets/gcs.webp";
+import quinoaVeggieBowlImg from "../assets/qvb.webp";
+import berrySmoothieImg from "../assets/berry-smoothie.webp";
+import chickpeaStirFryImg from "../assets/chickpea-stirfry.webp";
+import oatmealFruitsImg from "../assets/oatmeal-fruits.webp";
+import zucchiniNoodlesImg from "../assets/zucchini-noodles.webp";
+import bakedSalmonImg from "../assets/baked-salmon.webp";
+import yogurtParfaitImg from "../assets/yogurt-parfait.webp";
+import lentilSoupImg from "../assets/lentil-soup.webp";
+import stuffedPeppersImg from "../assets/stuffed-peppers.webp";
+import eggMuffinsImg from "../assets/egg-muffins.webp";
 
 const recipeImages = {
   "Avocado Toast": avocadoToastImg,

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Footer from "./Footer"
 
-import AboutWall from "../assets/team.jpg"
+import AboutWall from "../assets/team.webp"
 
 const AboutUsSection = () => {
   return (
