@@ -44,6 +44,7 @@ import StuffedBellPeppers from "./Stuffed Bell Peppers";
 import LentilSoup from "./LentilSoup";
 import EggVeggieMuffins from "./EggVeggieMuffins";
 import ScrollToTop from "./ScrollToTop";
+import FoodsSection from "./FoodsSection";
 
 function App() {
 
@@ -68,6 +69,7 @@ function App() {
         <Route path="/superfoods" element={<Superfoods />} />
         <Route path="/mindfulness" element={<Mindfulness />} />
         <Route path="/sleep" element={<Sleep />} />
+        <Route path="/foods-section" element={<FoodsSection />} />
         <Route path="/plantbased" element={<PlantBased />} />
         <Route path="/strength" element={<Strength />} />
         <Route path="/motivation" element={<Motivation />} />

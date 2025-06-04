@@ -99,7 +99,7 @@ const MorningWorkout = () => {
           8 Energizing Morning Workouts to Start Your Day Right
         </motion.h1>
 
-        <div className="max-w-6xl mx-auto space-y-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {workouts.map((item, index) => (
             <motion.div
               key={index}
@@ -107,24 +107,23 @@ const MorningWorkout = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
-              className={`flex flex-col md:flex-row gap-8 items-center ${
-                item.imgFirst ? "" : "md:flex-row-reverse"
-              }`}
+              
             >
               <img
                 src={item.image}
                 alt={item.alt}
-                className="rounded-lg shadow-md w-full md:w-1/2 object-cover"
+                className="rounded-lg shadow-md w-fullr"
               />
-              <div className="md:w-1/2">
+              <div className="">
                 <h2 className="text-2xl font-semibold text-green-500 mb-3">
                   {item.title}
                 </h2>
-                <p className="text-lg leading-relaxed">{item.description}</p>
+                <p className="text-lg leading-relaxed mb-6">{item.description}</p>
               </div>
             </motion.div>
           ))}
 
+          </div>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -143,7 +142,6 @@ const MorningWorkout = () => {
               <li>Supports long-term cardiovascular and muscular health</li>
             </ul>
           </motion.div>
-        </div>
       </section>
       <Footer />
     </>

@@ -16,6 +16,7 @@ const Navbar = () => {
     { name: "Mental Wellness", path: "/mentalwellness" },
     { name: "Nutrition Counseling", path: "/nutritioncounseling" },
     { name: "Energy Foods", path: "/energyfoods" },
+    { name: "Healthy Foods", path: "/foods-section" },
   ];
 
   const handleNavigate = (path) => {
